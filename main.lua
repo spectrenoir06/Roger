@@ -1,21 +1,8 @@
---[[ **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    main.lua                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: adoussau <antoine@doussaud.org>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2014/07/18 23:14:44 by adoussau          #+#    #+#              #
-#    Updated: 2014/07/18 23:20:06 by adoussau         ###   ########.fr        #
-#                                                                              #
-# ***************************************************************************--]]
-
-local Game = require "class/Game"
+local Map = require "class/Map"
 
 function love.load()
-
+	myMap = Map:new("map/1.json","tileset.png") -- create new map
 end
-
 
 function love.draw()
 

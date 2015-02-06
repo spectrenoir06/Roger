@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="50" height="50" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="musique" value=""/>
+ </properties>
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32">
+  <image source="../tileset.png" width="960" height="960"/>
+  <terraintypes>
+   <terrain name="Eau" tile="30"/>
+   <terrain name="sable" tile="94"/>
+   <terrain name="Herbe" tile="150"/>
+   <terrain name="terre" tile="100"/>
+   <terrain name="herbe 2" tile="163"/>
+  </terraintypes>
+  <tile id="1" terrain="2,2,2,0"/>
+  <tile id="2" terrain="2,2,0,2"/>
+  <tile id="4" terrain="1,1,1,0"/>
+  <tile id="5" terrain="1,1,0,1"/>
+  <tile id="7" terrain="2,2,2,1"/>
+  <tile id="8" terrain="2,2,1,2"/>
+  <tile id="10" terrain="3,3,3,2"/>
+  <tile id="11" terrain="3,3,2,3"/>
+  <tile id="13" terrain="4,4,4,2"/>
+  <tile id="14" terrain="4,4,2,4"/>
+  <tile id="30" terrain="0,0,0,0"/>
+  <tile id="31" terrain="2,0,2,2"/>
+  <tile id="32" terrain="0,2,2,2"/>
+  <tile id="34" terrain="1,0,1,1"/>
+  <tile id="35" terrain="0,1,1,1"/>
+  <tile id="37" terrain="2,1,2,2"/>
+  <tile id="38" terrain="1,2,2,2"/>
+  <tile id="40" terrain="3,2,3,3"/>
+  <tile id="41" terrain="2,3,3,3"/>
+  <tile id="43" terrain="4,2,4,4"/>
+  <tile id="44" terrain="2,4,4,4"/>
+  <tile id="60" terrain="0,0,0,2"/>
+  <tile id="61" terrain="0,0,2,2"/>
+  <tile id="62" terrain="0,0,2,0"/>
+  <tile id="63" terrain="0,0,0,1"/>
+  <tile id="64" terrain="0,0,1,1"/>
+  <tile id="65" terrain="0,0,1,0"/>
+  <tile id="66" terrain="1,1,1,2"/>
+  <tile id="67" terrain="1,1,2,2"/>
+  <tile id="68" terrain="1,1,2,1"/>
+  <tile id="69" terrain="2,2,2,3"/>
+  <tile id="70" terrain="2,2,3,3"/>
+  <tile id="71" terrain="2,2,3,2"/>
+  <tile id="72" terrain="2,2,2,4"/>
+  <tile id="73" terrain="2,2,4,4"/>
+  <tile id="74" terrain="2,2,4,2"/>
+  <tile id="90" terrain="0,2,0,2"/>
+  <tile id="91" terrain="2,2,2,2"/>
+  <tile id="92" terrain="2,0,2,0"/>
+  <tile id="93" terrain="0,1,0,1"/>
+  <tile id="94" terrain="1,1,1,1"/>
+  <tile id="95" terrain="1,0,1,0"/>
+  <tile id="96" terrain="1,2,1,2"/>
+  <tile id="98" terrain="2,1,2,1"/>
+  <tile id="99" terrain="2,3,2,3"/>
+  <tile id="100" terrain="3,3,3,3"/>
+  <tile id="101" terrain="3,2,3,2"/>
+  <tile id="102" terrain="2,4,2,4"/>
+  <tile id="103" terrain="4,4,4,4"/>
+  <tile id="104" terrain="4,2,4,2"/>
+  <tile id="120" terrain="0,2,0,0"/>
+  <tile id="121" terrain="2,2,0,0"/>
+  <tile id="122" terrain="2,0,0,0"/>
+  <tile id="123" terrain="0,1,0,0"/>
+  <tile id="124" terrain="1,1,0,0"/>
+  <tile id="125" terrain="1,0,0,0"/>
+  <tile id="126" terrain="1,2,1,1"/>
+  <tile id="127" terrain="2,2,1,1"/>
+  <tile id="128" terrain="2,1,1,1"/>
+  <tile id="129" terrain="2,3,2,2"/>
+  <tile id="130" terrain="3,3,2,2"/>
+  <tile id="131" terrain="3,2,2,2"/>
+  <tile id="132" terrain="2,4,2,2"/>
+  <tile id="133" terrain="4,4,2,2"/>
+  <tile id="134" terrain="4,2,2,2"/>
+ </tileset>
+ <layer name="Sol" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztmd9OE0EUxicSvcAWH4ESNQHFR1DRC0V9hKp4QVAfQfxzASKPsG0MEHhSZ5L54tev58zObiF6wcWXbbe73fOb87fT1RDC6rX+ibainv8HdizKcC/q7iWzPI560lNPezLsRJ1cAgvbvhY1iZpGNVn6vsnvp/kzXDPqwASG06gzUhcWXfM1shN2KQMfG7l2Svfj9ajAwgyn2R/g2cksNfZjzXV9de3ZTouP78M53A8Wyzffom4Rw4lw3Kywv5FnaZyozcw0keumdL7EZvkGLGfEcJoZfjgMHPP8TItD40bt9WzW65T/nWEbWE6yPIaksXy3PofjhtfZyg2NMf28dL/lE2YpMcAXaqva3xiaGkddY73HW6uafPEY4Au260XUS9K2sc5aX6211/zxfKxH3Of5ps0X+J7dqIuo83zcC/OxwFoXuzV2vJywckpjsJZlbKyfxeE9R3uGF/dWrWMfej01ycp9L7/5GbvEkI4bYTbOrlKIYV6LWg7NY/XHOb2+kHN63vvMe63nNjIL+6qrP3A8iDokDaJuy7k2DbJdtfcNiH0vzOZrFw6tOZzHu8HOdW8O4VqR7lsO87mseX5A7PAJrhmF9lxHzdUaybaCYz3Mxq3V47lWYG29uVFrB8czx1epPyqH1hiuHeDQGcPrDxPhUB94/RA+QXxxfdluYbHyQ3sUx5U1e6j/1B/WvGXNYcvCwnUgfc/b4OfKl6glst2aLcChc58141r5oTOKNQ+oXzT3EWcln4DFWlvmsOYmK+eVozQ7Wv2S6yZyn31bql9gseY9Kz+83sy9lGcBzfUbUfstWhIWrElbHUZP1PhRDi8ntDbws3WOqekJWFuw1PiDc17rkPYPb87ldbf8ASVffKXn/m6xiWOi6egPjRFrXTVPma3EUeMLtakPh8aAxeHNvVae6zyrdmxFPcvSvZxFODTPU3z+DPMx5NWa9DvsQZjtZZgzNKYSA/bYknRfCrHel0PjvQnzDFaccUzpbxhlSHpPDNCH8DdnlKO2XllrDjuHYTYPuOYO6bzOy4fZn9bzmeM+cXhx1aXuWmuu89SrqNdZb+RznYsnji+S0t7BdxHvJag/auuuxhUEu5PND6M+Rn3K2jSY9Hu61KhS3e3SP6weAbth8yPiYG1mlmnmtfpeqV+wsAfSt15xLoCL179NYOFYa3s2s/H+bJpxUf8wK3atu5wL3vq3sYBjFOr3osbZfmbg37x9+kcfBuhzmM2xUfD/89D/VrAXmBi4htdw8PzeJ54sDq1zXoxZPrD2X2o4uD5cFof2HKveIJ/ZB9a+Udp78fpQKdfTc4+ifpHuVDKsRB2T/Ryvase44AO8B4PXh0q1l3s0dNTCspJ5j+l7mMGyIz2TZxmLxZtr2nKEZ1j0AsSF+ogF+3G99nkvpngvVnOiSzx5LNaegrc/oOeGYX49amOqbzxZLN5vZl7nYZbOxvob3prZSzHFdbYvQw2f7q+wX/S8lxfMwbmwaDwt6i/1Fddbz5bEYc35mPWvwhd9Y3G/YEvpntJ917rWVeoPjvOHRQ==
+  </data>
+ </layer>
+ <layer name="Block" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt2UsSwiAMBmA4rl7Rt7dQq2cxXXSGQVAJKf2Z/otv024S8qiD3jnniaiJndiLQ+E7jY2fL4+buItH8Gzr8++0juIkzgC1q4l9EE/xAohrVNJrrWLX9L9lr1mpiWmaodics9yqVoh5aGplvac1cn1SUgPE2UnllzpvhBqUSp03cg0sakdtoO1VjdxMx7mh5vptr8a5oe6vVFzhPMe5oe4v1LiIiKhf0zfyChBLDX4jKRTeV/Z87xreV6Ldu/5z9kvHYnH2v3LrMd8xt4v77CXU/lrLPPecG/J/RNoaLR0Lmt5/JxIRrcEbGqWA4Q==
+  </data>
+ </layer>
+ <layer name="Deco" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt2MkNwjAQBdCkAtY2WNtgLQTojrUN1jZYz/xLJMsaEuxk8ATN4VkoFpLH82OE4yiKYvW3lrCCteOcqwqGKtRinjr2cICj49w36hga0IQWtKHDVMcVbnD/cs6lR10MPejDAIYwYqjDJzcuPRpjmMCUqQd5cpPWP9sMwxwWzHWkrcmnV0WeCyF7lfdc+HWvivxOCFRuJGbJJzcSs+STm7JkScm1gS3sBKwljxOc4WI8s88rqbWa63zAE17GvH1eUbVKkHWu2ucVVasEeq4qpZQqWhn/Q1HK+B+KEvq33rxr5b535WTetXLfu3LsffLMvGvlvHfl2vu02qTni9pvqjbJ+fr0PlO1Sc5X1vssPUvUHiefzbVLzpJLjyRnyaVHodeilFJKqXJ7A8ycfUk=
+  </data>
+ </layer>
+ <objectgroup color="#aa0000" name="Calque d'objets 1" width="50" height="50">
+  <object name="Zboob pnj" type="pnj" x="1280" y="960" width="64" height="64">
+   <properties>
+    <property name="id" value="1"/>
+   </properties>
+  </object>
+  <object name="Zboob pnj" type="pnj" x="640" y="768" width="64" height="64">
+   <properties>
+    <property name="id" value="3"/>
+   </properties>
+  </object>
+  <object name="Zboob pnj" type="pnj" x="512" y="768" width="64" height="64">
+   <properties>
+    <property name="id" value="4"/>
+   </properties>
+  </object>
+  <object name="Zboob pnj" type="pnj" x="1152" y="960" width="64" height="64">
+   <properties>
+    <property name="id" value="2"/>
+   </properties>
+  </object>
+  <object name="porte 1" type="obj" x="1600" y="1024" width="64" height="64">
+   <properties>
+    <property name="id" value="3"/>
+   </properties>
+  </object>
+  <object name="mobil-off" type="pnj" x="1536" y="1856" width="64" height="64">
+   <properties>
+    <property name="id" value="9"/>
+   </properties>
+  </object>
+  <object name="mobil-on" type="pnj" x="1728" y="1856" width="64" height="64">
+   <properties>
+    <property name="id" value="8"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
