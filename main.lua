@@ -28,3 +28,11 @@ end
 function love.mousepressed(x,y,button)
 
 end
+
+function love.keypressed(key)
+	if key == 'escape' then
+		love.event.quit()
+	else
+		print(key)
+	end
+end
