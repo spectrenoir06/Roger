@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="50" height="50" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="22" tilewidth="32" tileheight="32" nextobjectid="8">
  <properties>
   <property name="musique" value=""/>
  </properties>
@@ -78,56 +78,20 @@
   <tile id="133" terrain="4,4,2,2"/>
   <tile id="134" terrain="4,2,2,2"/>
  </tileset>
- <layer name="Sol" width="50" height="50">
+ <layer name="Sol" width="40" height="22">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
- <layer name="Block" width="50" height="50">
+ <layer name="Block" width="40" height="22">
   <data encoding="base64" compression="zlib">
-   eJzt2UsSwiAMBmA4rl7Rt7dQq2cxXXSGQVAJKf2Z/otv024S8qiD3jnniaiJndiLQ+E7jY2fL4+buItH8Gzr8++0juIkzgC1q4l9EE/xAohrVNJrrWLX9L9lr1mpiWmaodics9yqVoh5aGplvac1cn1SUgPE2UnllzpvhBqUSp03cg0sakdtoO1VjdxMx7mh5vptr8a5oe6vVFzhPMe5oe4v1LiIiKhf0zfyChBLDX4jKRTeV/Z87xreV6Ldu/5z9kvHYnH2v3LrMd8xt4v77CXU/lrLPPecG/J/RNoaLR0Lmt5/JxIRrcEbGqWA4Q==
+   eJztw0ENAAAMA6Grf9OzsQckrJqqqqrvH7f5A3E=
   </data>
  </layer>
- <layer name="Deco" width="50" height="50">
+ <layer name="Deco" width="40" height="22">
   <data encoding="base64" compression="zlib">
-   eJzt2MkNwjAQBdCkAtY2WNtgLQTojrUN1jZYz/xLJMsaEuxk8ATN4VkoFpLH82OE4yiKYvW3lrCCteOcqwqGKtRinjr2cICj49w36hga0IQWtKHDVMcVbnD/cs6lR10MPejDAIYwYqjDJzcuPRpjmMCUqQd5cpPWP9sMwxwWzHWkrcmnV0WeCyF7lfdc+HWvivxOCFRuJGbJJzcSs+STm7JkScm1gS3sBKwljxOc4WI8s88rqbWa63zAE17GvH1eUbVKkHWu2ucVVasEeq4qpZQqWhn/Q1HK+B+KEvq33rxr5b535WTetXLfu3LsffLMvGvlvHfl2vu02qTni9pvqjbJ+fr0PlO1Sc5X1vssPUvUHiefzbVLzpJLjyRnyaVHodeilFJKqXJ7A8ycfUk=
+   eJztw0ENAAAMA6Grf9OzsQckrJqqqqrvH7f5A3E=
   </data>
  </layer>
- <objectgroup color="#aa0000" name="Calque d'objets 1" width="50" height="50">
-  <object name="Zboob pnj" type="pnj" x="1280" y="960" width="64" height="64">
-   <properties>
-    <property name="id" value="1"/>
-   </properties>
-  </object>
-  <object name="Zboob pnj" type="pnj" x="640" y="768" width="64" height="64">
-   <properties>
-    <property name="id" value="3"/>
-   </properties>
-  </object>
-  <object name="Zboob pnj" type="pnj" x="512" y="768" width="64" height="64">
-   <properties>
-    <property name="id" value="4"/>
-   </properties>
-  </object>
-  <object name="Zboob pnj" type="pnj" x="1152" y="960" width="64" height="64">
-   <properties>
-    <property name="id" value="2"/>
-   </properties>
-  </object>
-  <object name="porte 1" type="obj" x="1600" y="1024" width="64" height="64">
-   <properties>
-    <property name="id" value="3"/>
-   </properties>
-  </object>
-  <object name="mobil-off" type="pnj" x="1536" y="1856" width="64" height="64">
-   <properties>
-    <property name="id" value="9"/>
-   </properties>
-  </object>
-  <object name="mobil-on" type="pnj" x="1728" y="1856" width="64" height="64">
-   <properties>
-    <property name="id" value="8"/>
-   </properties>
-  </object>
- </objectgroup>
+ <objectgroup color="#aa0000" name="Calque d'objets 1"/>
 </map>

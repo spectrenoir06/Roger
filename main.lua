@@ -1,8 +1,8 @@
 local Map = require "class/Map"
 
-function love.load()
-	myMap = Map:new("map/1.json","tileset.png") -- create new map
-end
+-- function love.load()
+-- 	myMap = Map:new("map/1.json","tileset.png") -- create new map
+-- end
 
 function love.draw()
 
