@@ -168,6 +168,12 @@ function Perso:stop()
         self.game:nextMap()
     elseif mur == 6 then            -- clef
         self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    elseif mur == 7 then            -- epee 1
+        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    elseif mur == 8 then            -- epee 2
+        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    elseif mur == 9 then            -- eppe 3
+        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
     end
 end
 
