@@ -9,12 +9,18 @@ local Game = class('Game')
 function Game:initialize(i)
 	self.map = Map:new("map/"..i..".json","map/tileset.png")
 	self.perso = Perso:new(3*32, 12*32, self)
+	self:soundInit()
 	self:initPerso()
+	self.mapNb = 1
+end
+
+function Game:soundInit()
 	self.nxtlvlSound = love.audio.newSource("sfx/nxtl.wav", "static")
 	self.nxtlvlSound:setVolume(0.5)
 	self.music = love.audio.newSource("sfx/dungeon.ogg", "static")
+	self.music:setVolume(0.8)
+	self.walkSound = love.audio.newSource("sfx/walk.mp3", "static")
 	self.music:play()
-	self.mapNb = 1
 end
 
 function Game:initPerso()

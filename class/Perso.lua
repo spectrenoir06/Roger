@@ -39,6 +39,7 @@ function Perso:update(dt)
 	if self.move then
     self.isPlay = true
     self.sprite:update(dt)
+    self.game.walkSound:play()
 		if self.direction == 1 then
           	self.posY 	= self.posY - 4
            	self.pixel	= self.pixel + 4
@@ -58,6 +59,7 @@ function Perso:update(dt)
             self:stop()
        	end
     else
+        self.game.walkSound:pause()
         if love.keyboard.isDown("up") then
             self:up()
         elseif love.keyboard.isDown("down") then
