@@ -95,7 +95,7 @@ end
 
 function Perso:up()
 	if not self.move then
-		if self.direction == 1 and self:col(0,-1)==0 then
+		if self.direction == 1 and self:col(0,-1)~=2 and self:col(0,-1)~=3 then
 			self.move = true
 			self.pixel = 0
 		else
@@ -107,7 +107,7 @@ end
 
 function Perso:down()
 	if not self.move then
-		if self.direction == 2 and self:col(0,1)==0 then
+		if self.direction == 2 and self:col(0,1)~=2 and self:col(0,1)~=3 then
 			self.move = true
 			self.pixel = 0
 		else
@@ -119,7 +119,7 @@ end
 
 function Perso:left()
 	if not self.move then
-		if self.direction == 3 and self:col(-1,0)==0 then
+		if self.direction == 3 and self:col(-1,0)~=2 and self:col(-1,0)~=3 then
 			self.move = true
 			self.pixel = 0
 		else
@@ -131,7 +131,7 @@ end
 
 function Perso:right()
 	if not self.move then
-		if self.direction == 4 and self:col(1,0)==0 then
+		if self.direction == 4 and self:col(1,0)~=2 and self:col(1,0)~=3 then
 			self.move = true
 			self.pixel = 0
 		else
@@ -139,6 +139,10 @@ function Perso:right()
 			self.direction = 4
 		end
 	end
+end
+
+function Perso:useBlock(x, y, block)
+
 end
 
 function Perso:getPosX()
