@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="40" height="23" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="32" tileheight="32" nextobjectid="1">
  <properties>
   <property name="musique" value=""/>
  </properties>
@@ -16,7 +16,7 @@
    eJzdVEEOwzAIy9RI3fr/B0+9RQiD7baH7cAhIYAxONsYY/szey3G3Lv5q7rR4rvPTfjYmt3b0yaBm7lncVzpBdkk866+J7h28WU+d0cdjWT4UL4reup28bQ9yY1qqbw+wZ+jmzfoPYvP8LE9dho4RNzKLPeidhfv7HDFH9MjmqmLUdktpL+IJ/urEdcq/gqf2u/d/HVx7jwUbKsvzgv9W6xWu5rdvzODX+GP4aDDjmJWTip8LAeZXlx+VS0o+dGcnPkr+8Dkj7HVGf03CIejeTWHO+uOP3a/2TOTT8HxS/YFxSAITA==
   </data>
  </layer>
- <layer name="Fog" width="40" height="23" opacity="0.44">
+ <layer name="Fog" width="40" height="23" opacity="0.73">
   <data encoding="base64" compression="zlib">
    eJztwzENAAAMBKGb3r/kiugKCaumqqqqzwc9lRWR
   </data>
