@@ -162,8 +162,10 @@ function Perso:stop()
     self:unfog()
     print(self:getCase())
     local sol, mur = self:getCase()
-    if sol == 10 then
+    if sol == 10 then               -- escalier
         self.game:nextMap()
+    elseif mur == 6 then            -- clef
+        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
     end
 end
 
