@@ -8,12 +8,12 @@
  </tileset>
  <layer name="Sol" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJztzrEJAAAIA7Ai+P/LviGaIXsqSXFOLzgAAAC/DO5VBzQ=
+   eJztz7EJAEAIBMFDMPr++/0mDAQnmHRhK0mxxhvq9IIXAADglg9htAc9
   </data>
  </layer>
  <layer name="Block" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJzdlMEOwzAIQzM1Urf+/wdPvUUIY5tlh+3AIU2BhwkcY4zjz+yxmPK9G7/KGy3+99rEp+Zk/942xRhMb5Xjk1qQTTFuVc8Orbt8it4qa2dGMj617y4fszOJjXK5un5DP3fv3OcnqD3zz/jUGtkMXCa308uzyM38O2+40k+pEfW0y+i8LTR/kSfb1Uhrl7/ic+vdrR/z6/bDYVvvYr/Q3lJnleVke2eGe0c/RQPGjnxWTSo+VYNsXrr6urPgxEd96vTfeQ9K/OhbndG+QRydmXdjdHvN9FPft3pW4jkcv2Rv9eAIUA==
+   eJzdVEEOwzAIy9RI3fr/B0+9RQiD7baH7cAhIYAxONsYY/szey3G3Lv5q7rR4rvPTfjYmt3b0yaBm7lncVzpBdkk866+J7h28WU+d0cdjWT4UL4reup28bQ9yY1qqbw+wZ+jmzfoPYvP8LE9dho4RNzKLPeidhfv7HDFH9MjmqmLUdktpL+IJ/urEdcq/gqf2u/d/HVx7jwUbKsvzgv9W6xWu5rdvzODX+GP4aDDjmJWTip8LAeZXlx+VS0o+dGcnPkr+8Dkj7HVGf03CIejeTWHO+uOP3a/2TOTT8HxS/YFxSAITA==
   </data>
  </layer>
  <layer name="Fog" width="40" height="23" opacity="0.73">
