@@ -80,7 +80,7 @@
  </tileset>
  <layer name="Sol" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJztw8EJAAAMA6Ej+w/dIfpVcNVUVVX1+QDIvQcx
+   eJztzrEJAAAIA7Ai+P/LPiHokCF7KkkBAGf6wQEANgzdOQc0
   </data>
  </layer>
  <layer name="Block" width="40" height="23">
