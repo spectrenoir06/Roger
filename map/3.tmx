@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="23" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="musique" value=""/>
+ </properties>
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32">
+  <image source="tileset.png" width="320" height="96"/>
+ </tileset>
+ <layer name="Sol" width="40" height="23">
+  <data encoding="base64" compression="zlib">
+   eJztzqENAAAIA7BlCf+/zA8oREV9m6S8MQ8OAAAAFwvvLQc0
+  </data>
+ </layer>
+ <layer name="Block" width="40" height="23">
+  <data encoding="base64" compression="zlib">
+   eJzNlEEOxSAIRG1K4uLf/74/3TVG4I1o0gUbhGEYwLu1dn/crpedxlmp9cT2V54NODPLYjw+Ge6Me0W/iEvGj2BGPpUfnSfJoXWU2e3SwsupGOlH1YLOT8lTetjBj+7miN2HOuQmT/OL9I5mmvlpL97cLInZwe838Sk7tToDckORTuRWMr7kPfONfLuAV+VnoIYt1iPz9vY1+4Oonup+KX9glV9Ui+qo8LMAQ8FUtFWN3MvK3Sg3scJP2RlSg/bicajsPemL3Kv6Fyi67t7FU7gn7Q9YiQg9
+  </data>
+ </layer>
+ <layer name="Fog" width="40" height="23" opacity="0.67">
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAMBKGb3r/kiugKCaumqqqqzwc9lRWR
+  </data>
+ </layer>
+</map>
