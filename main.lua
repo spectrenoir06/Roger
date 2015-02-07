@@ -14,11 +14,11 @@ end
 
 function love.update(dt)
 	print(dt)
+	game:update(dt)
 end
 
 function love.mousepressed(x,y,button)
 	print(x,y,button)
-	game:newBatiment(x,y)
 end
 
 function love.keypressed(key)
@@ -26,5 +26,6 @@ function love.keypressed(key)
 		love.event.quit()
 	else
 		print(key)
+		game:keypressed(key)
 	end
 end

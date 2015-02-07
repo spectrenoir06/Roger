@@ -4,7 +4,7 @@ local Sprite 	= require 'class/Sprite'
 local Perso = class('Perso')
 
 function Perso:initialize(posX, posY, game)
-  	
+
   	self.posX =  posX or 64
   	self.posY =  posY or 64
   	self.speed = 200
@@ -13,10 +13,10 @@ function Perso:initialize(posX, posY, game)
 	self.dX = 0
 	self.dY = 0
 
-	self.lX = 64
-	self.lY = 64
+	self.lX = 32
+	self.lY = 32
 
-	self.sprite = Sprite:new("texture/sprite.png", 64, 64)
+	self.sprite = Sprite:new("texture/sprite.png", 32, 32)
 	self.direction = 2
 
 	self.game = game
@@ -33,24 +33,24 @@ function Perso:draw()
 end
 
 function Perso:update(dt)
-	
+
 	self.sprite:update(dt)
 	--print(self:col(0,0))
 	if self.move then
 		if self.direction == 1 then
-          	self.posY 	= self.posY - 8
-           	self.pixel	= self.pixel + 8
+          	self.posY 	= self.posY - 4
+           	self.pixel	= self.pixel + 4
         elseif self.direction == 2 then
-          	self.posY 	= self.posY + 8
-           	self.pixel	= self.pixel + 8
+          	self.posY 	= self.posY + 4
+           	self.pixel	= self.pixel + 4
        	elseif self.direction == 3 then
-           	self.posX 	= self.posX - 8
-          	self.pixel 	= self.pixel + 8
+           	self.posX 	= self.posX - 4
+          	self.pixel 	= self.pixel + 4
       	elseif self.direction == 4 then
-          	self.posX 	= self.posX + 8
-           	self.pixel	= self.pixel + 8
+          	self.posX 	= self.posX + 4
+           	self.pixel	= self.pixel + 4
       	end
-       	if self.pixel == 64 then
+       	if self.pixel == 32 then
        		--print(self:col(0,0))
          	self.move = false
        	end
@@ -58,12 +58,12 @@ function Perso:update(dt)
 end
 
 function Perso:col(x, y)
-	return self.game.map.layers[2].data[(self.posX/64)+x][(self.posY/64)+y]
+	return self.game.map.layers[2].data[(self.posX/32)+x][(self.posY/32)+y]
 end
 
 function Perso:up()
 	if not self.move then
-		if self.direction == 1 and self:col(0,-1)==5 then
+		if self.direction == 1 and self:col(0,-1)==0 then
 			self.move = true
 			self.pixel = 0
 		else
@@ -75,7 +75,7 @@ end
 
 function Perso:down()
 	if not self.move then
-		if self.direction == 2 and self:col(0,1)==5 then
+		if self.direction == 2 and self:col(0,1)==0 then
 			self.move = true
 			self.pixel = 0
 		else
@@ -87,7 +87,7 @@ end
 
 function Perso:left()
 	if not self.move then
-		if self.direction == 3 and self:col(-1,0)==5 then
+		if self.direction == 3 and self:col(-1,0)==0 then
 			self.move = true
 			self.pixel = 0
 		else
@@ -99,7 +99,7 @@ end
 
 function Perso:right()
 	if not self.move then
-		if self.direction == 4 and self:col(1,0)==5 then
+		if self.direction == 4 and self:col(1,0)==0 then
 			self.move = true
 			self.pixel = 0
 		else
