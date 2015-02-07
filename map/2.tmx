@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="32" tileheight="32" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" width="40" height="23" tilewidth="32" tileheight="32">
  <properties>
   <property name="musique" value=""/>
  </properties>
@@ -13,7 +13,7 @@
  </layer>
  <layer name="Block" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJzdVEEOwzAIy9RI3fr/B0+9RQiD7baH7cAhIYAxONsYY/szey3G3Lv5q7rR4rvPTfjYmt3b0yaBm7lncVzpBdkk866+J7h28WU+d0cdjWT4UL4reup28bQ9yY1qqbw+wZ+jmzfoPYvP8LE9dho4RNzKLPeidhfv7HDFH9MjmqmLUdktpL+IJ/urEdcq/gqf2u/d/HVx7jwUbKsvzgv9W6xWu5rdvzODX+GP4aDDjmJWTip8LAeZXlx+VS0o+dGcnPkr+8Dkj7HVGf03CIejeTWHO+uOP3a/2TOTT8HxS/YFxSAITA==
+   eJzdVMsOhEAIG+Mka4zz/7+78WAyIRRa1MPugYMPSimUtbW2/lksUzDvq/hRXRv2v+MhfmzN7N8zOsGbec/yuNMLig5wB8B7S2uVX6RJdUcrHvH4Ibw7fsp28YyPg41qqbq+oV/FNxvo3cv3+LE92v0fBmsXeUfYaI4ID+WPFvfE8rO3iZmjsqfqHkU5yH+Wj3erkdYq/4if2u/T+mV5lXmo+zfXt/NCd4v1KvqW+dfbC1W/xamTeYv146xJxC+q4eF3on6GrXpBwUe3RJ0/4yuVn82NntG9QTzmPWU9H9Wv3I9odhe3K7K7Yf2h6Mf4hennF+ML2IQJDw==
   </data>
  </layer>
  <layer name="Fog" width="40" height="23" opacity="0.73">
