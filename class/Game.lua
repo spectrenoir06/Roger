@@ -10,6 +10,8 @@ function Game:initialize(i)
 	self.map = Map:new("map/"..i..".json","map/tileset.png")
 	self.perso = Perso:new(3*32, 12*32, self)
 	self:initPerso()
+	self.nxtlvlSound = love.audio.newSource("sfx/0.wav", "static")
+	self.mapNb = 1
 end
 
 function Game:initPerso()
@@ -23,7 +25,7 @@ function Game:initPerso()
 			end
 		end
 	end
-	self.perso:popUnfog()
+	self.perso:Unfog()
 end
 
 function Game:update(dt)
@@ -33,6 +35,13 @@ end
 function Game:draw()
 	self.map:draw(0,0)
 	self.perso:draw()
+end
+
+function Game:nextMap()
+	self.mapNb = self.mapNb + 1
+	self.map = Map:new("map/"..self.mapNb..".json","map/tileset.png")
+	self:initPerso()
+	self.nxtlvlSound:play()
 end
 
 function Game:keypressed(key)

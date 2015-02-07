@@ -74,39 +74,7 @@ function Perso:col(x, y)
 	return self.game.map.layers[2].data[(self.posX/32)+x][(self.posY/32)+y]
 end
 
-function Perso:unfog()
-  -- self.game.map:setTile((self.posX/32)+3,(self.posY/32)  ,0,3)
-  -- self.game.map:setTile((self.posX/32)+2,(self.posY/32)-1,0,3)
-  -- self.game.map:setTile((self.posX/32)+1,(self.posY/32)-2,0,3)
-  -- self.game.map:setTile((self.posX/32)  ,(self.posY/32)-3,0,3)
-  -- self.game.map:setTile((self.posX/32)+3,(self.posY/32)  ,0,3)
-  -- self.game.map:setTile((self.posX/32)+2,(self.posY/32)+1,0,3)
-  -- self.game.map:setTile((self.posX/32)+1,(self.posY/32)+2,0,3)
-  -- self.game.map:setTile((self.posX/32)  ,(self.posY/32)+3,0,3)
-  -- self.game.map:setTile((self.posX/32)-1,(self.posY/32)+2,0,3)
-  -- self.game.map:setTile((self.posX/32)-2,(self.posY/32)+1,0,3)
-  -- self.game.map:setTile((self.posX/32)-3,(self.posY/32)  ,0,3)
-  -- self.game.map:setTile((self.posX/32)-2,(self.posY/32)-1,0,3)
-  -- self.game.map:setTile((self.posX/32)-1,(self.posY/32)-2,0,3)
-
-  self.game.map:setTile((self.posX/32)  ,(self.posY/32)-2,0,3)
-  self.game.map:setTile((self.posX/32)+1,(self.posY/32)-1,0,3)
-  self.game.map:setTile((self.posX/32)+2,(self.posY/32)  ,0,3)
-  self.game.map:setTile((self.posX/32)+1,(self.posY/32)+1,0,3)
-  self.game.map:setTile((self.posX/32)  ,(self.posY/32)+2,0,3)
-
-  self.game.map:setTile((self.posX/32)-1,(self.posY/32)+1,0,3)
-  self.game.map:setTile((self.posX/32)-2,(self.posY/32)  ,0,3)
-  self.game.map:setTile((self.posX/32)-1,(self.posY/32)-1,0,3)
-
-  self.game.map:setTile((self.posX/32)  ,(self.posY/32)-1,0,3)
-  self.game.map:setTile((self.posX/32)+1,(self.posY/32)  ,0,3)
-  self.game.map:setTile((self.posX/32)  ,(self.posY/32)+1,0,3)
-  self.game.map:setTile((self.posX/32)-1,(self.posY/32)  ,0,3)
-  self.game.map:setTile((self.posX/32),(self.posY/32),0,3)
-end
-
-function Perso:popUnfog()
+function Perso:Unfog()
   -- self.game.map:setTile((self.posX/32)+3,(self.posY/32)  ,0,3)
   -- self.game.map:setTile((self.posX/32)+2,(self.posY/32)-1,0,3)
   -- self.game.map:setTile((self.posX/32)+1,(self.posY/32)-2,0,3)
@@ -191,8 +159,12 @@ function Perso:useBlock(x, y, block)
 end
 
 function Perso:stop()
-    self:unfog()
+    self:Unfog()
     print(self:getCase())
+    local sol, mur = self:getCase()
+    if sol == 10 then
+        self.game:nextMap()
+    end
 end
 
 function Perso:getPosX()
