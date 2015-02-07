@@ -74,7 +74,7 @@ function Perso:col(x, y)
 	return self.game.map.layers[2].data[(self.posX/32)+x][(self.posY/32)+y]
 end
 
-function Perso:Unfog()
+function Perso:unfog()
   -- self.game.map:setTile((self.posX/32)+3,(self.posY/32)  ,0,3)
   -- self.game.map:setTile((self.posX/32)+2,(self.posY/32)-1,0,3)
   -- self.game.map:setTile((self.posX/32)+1,(self.posY/32)-2,0,3)
@@ -89,14 +89,14 @@ function Perso:Unfog()
   -- self.game.map:setTile((self.posX/32)-2,(self.posY/32)-1,0,3)
   -- self.game.map:setTile((self.posX/32)-1,(self.posY/32)-2,0,3)
 
-  self.game.map:setTile((self.posX/32)  ,(self.posY/32)-2,0,3)
+  -- self.game.map:setTile((self.posX/32)  ,(self.posY/32)-2,0,3)
   self.game.map:setTile((self.posX/32)+1,(self.posY/32)-1,0,3)
-  self.game.map:setTile((self.posX/32)+2,(self.posY/32)  ,0,3)
+  -- self.game.map:setTile((self.posX/32)+2,(self.posY/32)  ,0,3)
   self.game.map:setTile((self.posX/32)+1,(self.posY/32)+1,0,3)
-  self.game.map:setTile((self.posX/32)  ,(self.posY/32)+2,0,3)
+  -- self.game.map:setTile((self.posX/32)  ,(self.posY/32)+2,0,3)
 
   self.game.map:setTile((self.posX/32)-1,(self.posY/32)+1,0,3)
-  self.game.map:setTile((self.posX/32)-2,(self.posY/32)  ,0,3)
+  -- self.game.map:setTile((self.posX/32)-2,(self.posY/32)  ,0,3)
   self.game.map:setTile((self.posX/32)-1,(self.posY/32)-1,0,3)
 
   self.game.map:setTile((self.posX/32)  ,(self.posY/32)-1,0,3)
