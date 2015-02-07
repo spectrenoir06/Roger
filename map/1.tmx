@@ -13,7 +13,7 @@
  </layer>
  <layer name="Block" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJzVlcEOhDAIRGs00fj/H7zZW0ME3rC4xgMHa4VXmKnrGGN9USxTKHuV+KW+ylc5Pz1flY/k+q6dAY93PlpfnSupQ/hUDc6xmec9Yd0S5sWs3+GhqEeZtir+6eDz9EL6R3yh3AVXnqR6VvdmuvL05fXH5u7iy3wZza0yd88/2dxU/kxfxEe7U38Oey/c1d+oxlN8Ud1If3RP9s67K+i91sFnY/6vHE6//slH+3f1HfFYlY/oSPE+1bTSgypfxErmTnsf5VRmpnB1nO0NfErertxPxwfOKQhx
+   eJzVls0OgzAMg4tAYprG+7/uxK2K6tjOCmiHHGhL8+XHgbW1tv6RLZ05Zx37xf+5fhh8lfjV+Kr5U+46194JD4pP9e/WVfGj8Lk92NsWnnfCuhHmJaxfoaEsR6y3KvqZwYf6RcmfogtnFow0qfaze5b1FeovlJ949yw+psusbpW6I/2wurn8rL8UHe3Af29xLlyV38zHU3yZ36z/1DNsD80Kda7N4IvWf1deIF938qn5G72naKzKp/SRqv0DrCuzBf3/ZXuML2NV6h79jzjYnU7NHK4Zsd3J9ynyOXHPuvtp+wIhCwjE
   </data>
  </layer>
  <layer name="Fog" width="40" height="23" opacity="0.67">
