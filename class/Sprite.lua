@@ -10,21 +10,21 @@ function Sprite:initialize(file, lx, ly, delay, mode)
     self.frame  = {}                            -- tab of Quad
     self.width  = self.img:getWidth()           -- width of texture
     self.height = self.img:getHeight()          -- height of texture
-    
+
     for y=0,(self.height/ly)-1 do
             for x=0,(self.width/lx)-1 do
                 self.frame[x+(y*(self.width/lx))] = love.graphics.newQuad(x*lx,y*ly,lx,ly ,self.width, self.height)
             end
     end
-    
+
 
     self.tabAnim= {}                -- tab of animation
     self.delay  = delay or 0.25     -- delay between frame
-    self.anim   = 1       
+    self.anim   = 1
     self.speed  = 1
     self.timer  = 0
     self.pos    = 1
-    self.isPlay = true
+    self.isPlay = false
     self.mode   = mode or 1         -- mode 1 = "bounce"
 
 end
@@ -42,7 +42,7 @@ function Sprite:addAnimation(Tframe)
 end
 
 function Sprite:update(dt)
-    if self.isPlay then
+    -- if self.isPlay then
         self.timer = self.timer + dt * self.speed
         if self.timer > self.delay then
             self.timer = self.timer - self.delay
@@ -56,7 +56,7 @@ function Sprite:update(dt)
                 end
             end
         end
-    end
+    -- end
 end
 
 function Sprite:setAnim(nb,frame)
@@ -67,7 +67,7 @@ function Sprite:setAnim(nb,frame)
     -- else
         -- self.pos = 1
      end
-    
+
 end
 
 function Sprite:play()

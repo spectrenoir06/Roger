@@ -17,7 +17,8 @@ function Perso:initialize(posX, posY, game)
 	self.lY = 32
 
 	self.sprite = Sprite:new("texture/sprite.png", 32, 32)
-	self.direction = 2
+  self.sprite:setAnim(4, 2)
+  self.direction = 4
 
 	self.game = game
 
@@ -34,8 +35,10 @@ end
 
 function Perso:update(dt)
 
-	self.sprite:update(dt)
+	-- self.sprite:update(dt)
 	if self.move then
+    self.isPlay = true
+    self.sprite:update(dt)
 		if self.direction == 1 then
           	self.posY 	= self.posY - 4
            	self.pixel	= self.pixel + 4
