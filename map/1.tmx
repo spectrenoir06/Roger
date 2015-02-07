@@ -4,7 +4,7 @@
   <property name="musique" value=""/>
  </properties>
  <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32">
-  <image source="../tileset.png" width="320" height="96"/>
+  <image source="tileset.png" width="320" height="96"/>
  </tileset>
  <layer name="Sol" width="40" height="23">
   <data encoding="base64" compression="zlib">
@@ -13,7 +13,7 @@
  </layer>
  <layer name="Block" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJztlDkOACAIBDH6/zdb2RgPYMEjodjGKDtyZSLKoa+VOt2K2b+Z6RQf1/sEH5KLV+r7K18xYhoxvhTHk29XD21fc/2SwMuSjzu37bxM7krzJxVST06vaP0s+VZxkHxI98OqLyVxUD/Ofzx2M8rnxaHlQ+fJmu82D1rfUKipAhV5CWc=
+   eJztlMEOwCAIQzGabNn/f/BOXsxQkDI14dCT0j5FyUSUQ0crNVrl2dZw+otPml3XLjDfA7qLXfp7Kl8BMX0x7uTjyTfqx+y7luYlZl3qi55n3N7C7JXW34NcxEzl+LQ1miwEX8/Hch/a+dB7lxofa57kPB6z2crnxTHLZ/1PaL7VPNb+hkJVL/uFCX8=
   </data>
  </layer>
  <layer name="Fog" width="40" height="23" opacity="0.73">
