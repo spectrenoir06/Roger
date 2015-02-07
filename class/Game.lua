@@ -7,7 +7,7 @@ local Perso = require "class/Perso"
 local Game = class('Game')
 
 function Game:initialize()
-	self.map = Map:new("map/2.json","map/tileset.png")
+	self.map = Map:new("map/1.json","map/tileset.png")
 	self.perso = Perso:new(3*32, 12*32, self)
 	self:initPerso()
 end
@@ -24,6 +24,7 @@ function Game:initPerso()
 			end
 		end
 	end
+	self.perso:popUnfog()
 	self.map:update(1)
 end
 
