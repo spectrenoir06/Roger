@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="32" tileheight="32" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" width="40" height="23" tilewidth="32" tileheight="32">
  <properties>
   <property name="musique" value=""/>
  </properties>
  <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32">
-  <image source="../tileset.png" width="320" height="96"/>
+  <image source="tileset.png" width="320" height="96"/>
  </tileset>
  <layer name="Sol" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJztzrEJAAAIA7Ai+P/LPiHokCF7KkkBAGf6wQEANgzdOQc0
+   eJzt1rEJADAMA0FhyP4rZ4NAOhmuuP5RpUkyfDsFDa+25r72/QAA2MOv7HIBY+gHQA==
   </data>
  </layer>
  <layer name="Block" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJztlEsOwCAIRKl6/zN3UxNC2spHUBMWs1LgCQ4VAGrqaF1Eq3LSmC9F8XFrR/BZerHLfE/la5OY3hh3yuPJN5qH9l9z6/W75dHIz7P4uL7FZ5iRW5+7L6w7FTNSPkkvpPU0fEWQx7IvJPvhr/eePpa8rRliI/i8OLR8Fj958K3msc43leq6ATLtCWs=
+   eJzllc0KgCAQhBUFo/d/4OgQiKQ7M4uVdJhDq7Xf/pZCCGkhxUrMXUYe/yyfEj8an8qHfOu07QOeXnyof7auiB+Ej+3BWrl5LgZrNphjY58xQ3c5QvprdP4UX2vrMSA1V3cBY/P0PtJXbH+h88byWXPZ+5aXz1s3i9/aKcjslI7/Wm3d1PyO3rNy8Baf2n/oHets1nwoDJfq/8r2AT5P/pAZU/nU/TqaEaSnUQaVz2Jlas/uN5bfI09sK/D9UQezOAih
   </data>
  </layer>
- <layer name="Fog" width="40" height="23" opacity="0.73">
+ <layer name="Fog" width="40" height="23" opacity="0.44">
   <data encoding="base64" compression="zlib">
-   eJztziEOACAQA8Fi7v9PRuFIJS3JivEzkgYAUG0VHNztSF/cre14u/1wTJ/cMX1xx/QBAF7Z59UVFA==
+   eJztwzENAAAMBKGb3r/kiugKCaumqqqqzwc9lRWR
   </data>
  </layer>
 </map>
