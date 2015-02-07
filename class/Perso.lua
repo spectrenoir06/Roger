@@ -35,7 +35,6 @@ end
 function Perso:update(dt)
 
 	self.sprite:update(dt)
-	--print(self:col(0,0))
 	if self.move then
 		if self.direction == 1 then
           	self.posY 	= self.posY - 4
@@ -54,6 +53,16 @@ function Perso:update(dt)
        		--print(self:col(0,0))
          	self.move = false
        	end
+    else
+        if love.keyboard.isDown("up") then
+            self:up()
+        elseif love.keyboard.isDown("down") then
+            self:down()
+        elseif love.keyboard.isDown("left") then
+            self:left()
+        elseif love.keyboard.isDown("right") then
+            self:right()
+        end
     end
 end
 

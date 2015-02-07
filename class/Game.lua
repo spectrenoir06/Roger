@@ -21,15 +21,7 @@ function Game:draw()
 end
 
 function Game:keypressed(key)
-	if key == "up" then
-		self.perso:up()
-	elseif key == "down" then
-		self.perso:down()
-	elseif key == "left" then
-		self.perso:left()
-	elseif key == "right" then
-		self.perso:right()
-	end
+
 end
 
 return Game
