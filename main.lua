@@ -1,19 +1,26 @@
-local Map = require "class/Map"
+local class = require 'class/middleclass'
+local Game = require "class/Game"
+local Batiment = require "class/Batiment"
+
 
 function love.load()
-	myMap = Map:new("map/1.json","tileset.png") -- create new map
+	game = Game:new()
+	--test = Batiment:new(10,10)
+	texture = love.graphics.newImage("batiment.png")
 end
 
 function love.draw()
-	myMap:draw(0,0)
+	game:draw()
+	--love.draw(texture, 10, 10)
 end
 
 function love.update(dt)
-	--myMap:update(dt)
+	print(dt)
 end
 
 function love.mousepressed(x,y,button)
-
+	print(x,y,button)
+	--game:newBatiment(x,y)
 end
 
 function love.keypressed(key)
