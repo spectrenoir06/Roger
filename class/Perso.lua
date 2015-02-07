@@ -53,9 +53,9 @@ function Perso:update(dt)
            	self.pixel	= self.pixel + 4
       	end
        	if self.pixel == 32 then
-       		--print(self:col(0,0))
-         	self.move = false
-          self:unfog()
+    --print(self:col(0,0))
+            self.move = false
+            self:stop()
        	end
     else
         if love.keyboard.isDown("up") then
@@ -174,12 +174,21 @@ function Perso:useBlock(x, y, block)
 
 end
 
+function Perso:stop()
+    self:unfog()
+    print(self:getCase())
+end
+
 function Perso:getPosX()
 	return self.posX
 end
 
 function Perso:getPosY()
 	return self.posX
+end
+
+function Perso:getCase()
+    return self.game.map.layers[1].data[self.posX/32][self.posY/32], self.game.map.layers[2].data[self.posX/32][self.posY/32]
 end
 
 return Perso

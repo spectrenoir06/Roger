@@ -13,7 +13,7 @@ function love.draw()
 end
 
 function love.update(dt)
-	print(dt)
+	--print(dt)
 	game:update(dt)
 end
 
