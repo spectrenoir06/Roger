@@ -5,7 +5,7 @@ local Batiment = require "class/Batiment"
 texture = love.graphics.newImage("batiment.png")
 
 function love.load()
-	game = Game:new()
+	game = Game:new(1)
 end
 
 function love.draw()
