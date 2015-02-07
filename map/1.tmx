@@ -13,7 +13,7 @@
  </layer>
  <layer name="Block" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJztlDkOACAIBDH6/zdb2RgPYMEjodjGKDtyZSLKoa+VOt2K2b+Z6RQf1/sEH5KLV+r7K18xYhoxvhTHk29XD21fc/2SwMuSjzu37bxM7krzJxVST06vaP0s+VZxkHxI98OqLyVxUD/Ofzx2M8rnxaHlQ+fJmu82D1rfUKipAhV5CWc=
+   eJztlEsOwCAIRKl6/zN3UxNC2spHUBMWs1LgCQ4VAGrqaF1Eq3LSmC9F8XFrR/BZerHLfE/la5OY3hh3yuPJN5qH9l9z6/W75dHIz7P4uL7FZ5iRW5+7L6w7FTNSPkkvpPU0fEWQx7IvJPvhr/eePpa8rRliI/i8OLR8Fj958K3msc43leq6ATLtCWs=
   </data>
  </layer>
  <layer name="Fog" width="40" height="23" opacity="0.73">
