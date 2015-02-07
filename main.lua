@@ -2,6 +2,8 @@ local class = require 'class/middleclass'
 local Game = require "class/Game"
 local Batiment = require "class/Batiment"
 
+texture = love.graphics.newImage("batiment.png")
+
 
 function love.load()
 	game = Game:new()

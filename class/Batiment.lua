@@ -2,23 +2,23 @@ local class = require 'class/middleclass'
 
 local Batiment = class('Batiment')
 
-function Batiment:initialize(x, y)
-	local a = {}
+function Batiment:initialize()
+	self.posX = x or 10
+	self.posY = y or 10
+	self.evolution = 1
+	self.texture = love.graphics.newImage("batiment.png")
+end
 
-	a.posX = x or 10
-	a.posY = y or 10
-	a.evolution = 1
-	a.texture = love.graphics.newImage("batiment.png")
-	return setmetatable(a, Batiment)
+
+function Batiment:test()
+	print(self)
+	love.graphics.draw(texture, self.x, self.y)
 end
 
 function Batiment:update(dt)
 
 end
 
-function Batiment:draw()
-	love.graphics.draw(self.texture, 10, 10)
-end
 
 
 return Batiment

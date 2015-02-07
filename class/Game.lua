@@ -6,10 +6,8 @@ local Batiment = require "class/Batiment"
 local Game = class('Game')
 
 function Game:initialize()
-	local a = {}
-	a.map = Map:new("map/1.json","tileset.png")
-	a.batiments = {}
-	return setmetatable(a, Game)
+	self.map = Map:new("map/1.json","tileset.png")
+	self.batiments = {}
 end
 
 function Game:update(dt)
@@ -21,12 +19,13 @@ function Game:draw()
 
 	---for k,v in ipairs(self.batiments) do
 	--	print(k,v)
-	--	v.draw()
+	---	v.test()
 	--end
 end
 
 function Game:newBatiment(x,y)
-	table.insert(self.batiments, Batiment:new(x,y))
+	local bat = Batiment:new(x,y)
+	table.insert(self.batiments, bat)
 end
 
 return Game

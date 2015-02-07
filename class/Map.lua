@@ -4,20 +4,20 @@ local class = require 'class/middleclass'
 local Map = class('Map')
 
 local function map_read(tab)
-	
+
 	local layers = {}
-	
+
 	for k,v in pairs(tab.layers) do
 		layers[k] 			= {}
 		layers[k].width 	= tab.layers[k].width
 		layers[k].height 	= tab.layers[k].height
-		layers[k].name 		= tab.layers[k].name	 
+		layers[k].name 		= tab.layers[k].name
 		layers[k].data 		= {}
-				
+
 		for i=0,tab.layers[k].width-1 do -- creation layers
 			layers[k].data[i]={}
 		end
-		
+
 		for y=0, tab.layers[k].height-1 do
 			for x=0, tab.layers[k].width-1 do
 				layers[k].data[x][y] = tab.layers[k].data[(y*tab.width)+x+1]-1
@@ -26,15 +26,15 @@ local function map_read(tab)
 	end
 	return layers
 end
-    
+
 function Map:initialize(fichier,texture) --cree une map
-    
+
 	local a={}
     self.fichier 	= 	fichier
     self.json 			= 	json.decode(love.filesystem.read( fichier, nil ))
     self.layers 		= 	map_read(self.json)
 	if texture == nil then texture = self.json.tilesets[1].image end
-	
+
     self.LX			=	self.json.width
     self.LY			=	self.json.height
     self.tileset	=	love.graphics.newImage(texture)
@@ -42,35 +42,33 @@ function Map:initialize(fichier,texture) --cree une map
     self.tileLY		=	self.json.tileheight
 	self.tilesetLX	=	self.tileset:getWidth()
     self.tilesetLY	=	self.tileset:getHeight()
-    
+
 	self.tiles		=	{}
-	
+
     for y=0,(self.tilesetLY/self.tileLY)-1 do
         for x=0,(self.tilesetLX/self.tileLX)-1 do
             self.tiles[x+(y*self.tilesetLX/self.tileLX)] = love.graphics.newQuad(x*self.tileLX,y*self.tileLY, self.tileLX, self.tileLY ,self.tilesetLX, self.tilesetLY)
         end
     end
-	
+
 	self.spriteBatchs = {}
-	
+
 	for k,v in pairs(self.layers) do
 		self.spriteBatchs[k] = love.graphics.newSpriteBatch( self.tileset, self.LX*self.LY )
 		self.spriteBatchs[k]:clear()
-		
+
 		for x=0,(self.LX)-1 do
 			for y=0,(self.LY)-1 do
 				local id = v.data[x][y]
-				if id < 0 then print("error tile < 0 on "..v.name.." at ("..x..";"..y) id = 0 end   
+				if id < 0 then print("error tile < 0 on "..v.name.." at ("..x..";"..y) id = 0 end
 				self.spriteBatchs[k]:add(self.tiles[id], x*self.tileLX, y*self.tileLY)
 			end
         end
     end
-
-    return setmetatable(a, Map)
 end
-    
-    
-    
+
+
+
 function Map:update(nb)
     if nb then
         self.spriteBatchs[nb]:clear()
@@ -123,7 +121,7 @@ function Map:setTile(x,y,id,map)
 			print("error x or y out of map")
 			return nil
 		end
-		
+
 		if map then
 			self.layers[map].data[x][y]	=	id
 			self:update(map)
@@ -131,7 +129,7 @@ function Map:setTile(x,y,id,map)
 			self.layers[1].data[x][y]	=	id
 			self:update(1)
 		end
-		
+
 		return self:getTile(x,y,map)
 	else
 		print("error id")
@@ -140,10 +138,10 @@ function Map:setTile(x,y,id,map)
 end
 
 function Map:reload()
-	
+
 	self.layers 	= nil
     self.layers 	= map_read(self.json)
-    self:update() 
+    self:update()
 
 end
 
