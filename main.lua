@@ -5,11 +5,11 @@ function love.load()
 end
 
 function love.draw()
-
+	myMap:draw(0,0)
 end
 
 function love.update(dt)
-
+	--myMap:update(dt)
 end
 
 function love.mousepressed(x,y,button)
