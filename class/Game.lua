@@ -44,6 +44,7 @@ end
 function Game:draw()
 	self.map:draw(0,0)
 	self.perso:draw()
+	love.graphics.print( "Key : "..self.perso.keynb.."  level : "..self.mapNb, 10, 10)
 end
 
 function Game:nextMap()
