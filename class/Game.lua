@@ -9,6 +9,22 @@ local Game = class('Game')
 function Game:initialize()
 	self.map = Map:new("map/1.json","tileset.png")
 	self.perso = Perso:new(3*32, 12*32, self)
+	self:initPerso()
+end
+
+function Game:initPerso()
+	for y=0, self.map.layers[1].height-1 do
+		for x=0, self.map.layers[1].width-1 do
+			print(x,y,self.map.layers[1].data[x][y])
+			if self.map.layers[1].data[x][y] == 4 then
+				self.map.layers[1].data[x][y] = 1
+				self.perso.posX = 32 * x
+				self.perso.posY = 32 * y
+				break
+			end
+		end
+	end
+	self.map:update(1)
 end
 
 function Game:update(dt)
