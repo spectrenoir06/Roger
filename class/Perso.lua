@@ -27,6 +27,8 @@ function Perso:initialize(posX, posY, game)
 	self.sprite:addAnimation({3,4,5})
 	self.sprite:addAnimation({6,7,8})
 
+    self.keynb = 0
+
 end
 
 function Perso:draw()
@@ -108,10 +110,14 @@ end
 
 function Perso:up()
 	if not self.move then
-		if self.direction == 1 and self:col(0,-1)~=2 and self:col(0,-1)~=3 then
-			self.move = true
-			self.pixel = 0
-		else
+		if self.direction == 1 and self:col(0,-1)~=2 and ((self:col(0,-1)==3 and self.keynb > 0) or self:col(0,-1)~=3) then
+            if self:col(0,-1)==3 then
+                self.keynb = self.keynb - 1
+                self.game.map:setTile((self.posX/32),(self.posY/32) - 1,0,2)
+            end
+            self.move = true
+            self.pixel = 0
+        else
 			self.sprite:setAnim(1)
 			self.direction = 1
 		end
@@ -120,8 +126,12 @@ end
 
 function Perso:down()
 	if not self.move then
-		if self.direction == 2 and self:col(0,1)~=2 and self:col(0,1)~=3 then
-			self.move = true
+		if self.direction == 2 and self:col(0,1)~=2 and ((self:col(0,1)==3 and self.keynb > 0) or self:col(0,1)~=3) then
+            if self:col(0,1)==3 then
+                self.keynb = self.keynb - 1
+                self.game.map:setTile((self.posX/32),(self.posY/32) + 1,0,2)
+            end
+            self.move = true
 			self.pixel = 0
 		else
 			self.sprite:setAnim(2)
@@ -132,7 +142,11 @@ end
 
 function Perso:left()
 	if not self.move then
-		if self.direction == 3 and self:col(-1,0)~=2 and self:col(-1,0)~=3 then
+		if self.direction == 3 and self:col(-1,0)~=2 and ((self:col(-1,0)==3 and self.keynb > 0) or self:col(-1,0)~=3) then
+            if self:col(-1,0)==3 then
+                self.keynb = self.keynb - 1
+                self.game.map:setTile((self.posX/32) - 1,(self.posY/32),0,2)
+            end
 			self.move = true
 			self.pixel = 0
 		else
@@ -144,7 +158,11 @@ end
 
 function Perso:right()
 	if not self.move then
-		if self.direction == 4 and self:col(1,0)~=2 and self:col(1,0)~=3 then
+		if self.direction == 4 and self:col(1,0)~=2 and ((self:col(1,0)==3 and self.keynb > 0) or self:col(1,0)~=3) then
+            if self:col(1,0)==3 then
+                self.keynb = self.keynb - 1
+                self.game.map:setTile((self.posX/32) + 1,(self.posY/32),0,2)
+            end
 			self.move = true
 			self.pixel = 0
 		else
@@ -166,6 +184,7 @@ function Perso:stop()
         self.game:nextMap()
     elseif mur == 6 then            -- clef
         self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+        self.keynb = self.keynb + 1
     end
 end
 
