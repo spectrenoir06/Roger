@@ -17,14 +17,16 @@ end
 function Game:draw()
 	self.map:draw(0,0)
 
-	---for k,v in ipairs(self.batiments) do
-	--	print(k,v)
-	---	v.test()
-	--end
+	for k,v in ipairs(self.batiments) do
+		print(k,v)
+		v:draw()
+	end
 end
 
 function Game:newBatiment(x,y)
-	local bat = Batiment:new(x,y)
+	x2 = math.floor(x / 32)
+	y2 = math.floor(y / 32)
+	local bat = Batiment:new(x2 * 32,y2 * 32)
 	table.insert(self.batiments, bat)
 end
 
