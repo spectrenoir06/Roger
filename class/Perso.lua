@@ -55,6 +55,7 @@ function Perso:update(dt)
        	if self.pixel == 32 then
        		--print(self:col(0,0))
          	self.move = false
+          self:unfog()
        	end
     else
         if love.keyboard.isDown("up") then
@@ -71,6 +72,25 @@ end
 
 function Perso:col(x, y)
 	return self.game.map.layers[2].data[(self.posX/32)+x][(self.posY/32)+y]
+end
+
+function Perso:unfog()
+  self.game.map:setTile((self.posX/32)+3,(self.posY/32),0,3)
+  self.game.map:setTile((self.posX/32)+2,(self.posY/32-1),0,3)
+  self.game.map:setTile((self.posX/32)+1,(self.posY/32-2),0,3)
+  self.game.map:setTile((self.posX/32),(self.posY/32-3),0,3)
+  self.game.map:setTile((self.posX/32)+3,(self.posY/32),0,3)
+  self.game.map:setTile((self.posX/32)+2,(self.posY/32+1),0,3)
+  self.game.map:setTile((self.posX/32)+1,(self.posY/32+2),0,3)
+  self.game.map:setTile((self.posX/32),(self.posY/32+3),0,3)
+
+  self.game.map:setTile((self.posX/32)-1,(self.posY/32+2),0,3)
+  self.game.map:setTile((self.posX/32)-2,(self.posY/32+1),0,3)
+  self.game.map:setTile((self.posX/32)-3,(self.posY/32),0,3)
+  self.game.map:setTile((self.posX/32)-2,(self.posY/32-1),0,3)
+  self.game.map:setTile((self.posX/32)-1,(self.posY/32-2),0,3)
+  -- self.game.map:setTile((self.posX/32)-2,(self.posY/32+1),0,3)
+
 end
 
 function Perso:up()

@@ -88,4 +88,9 @@
    eJztlDkOACAIBDH6/zdb2RgPYMEjodjGKDtyZSLKoa+VOt2K2b+Z6RQf1/sEH5KLV+r7K18xYhoxvhTHk29XD21fc/2SwMuSjzu37bxM7krzJxVST06vaP0s+VZxkHxI98OqLyVxUD/Ofzx2M8rnxaHlQ+fJmu82D1rfUKipAhV5CWc=
   </data>
  </layer>
+ <layer name="Fog" width="40" height="23" opacity="0.73">
+  <data encoding="base64" compression="zlib">
+   eJztziEOACAQA8Fi7v9PRuFIJS3JivEzkgYAUG0VHNztSF/cre14u/1wTJ/cMX1xx/QBAF7Z59UVFA==
+  </data>
+ </layer>
 </map>
