@@ -4,7 +4,7 @@
   <property name="musique" value=""/>
  </properties>
  <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32">
-  <image source="../tileset.png" width="960" height="960"/>
+  <image source="../tileset.png" width="320" height="96"/>
   <terraintypes>
    <terrain name="Eau" tile="30"/>
    <terrain name="sable" tile="94"/>
@@ -80,17 +80,12 @@
  </tileset>
  <layer name="Sol" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJyNlUtOAzEQBb3hHCyQuAeI3yEiBSmBY7AA7mDnthiJkTpFdTuLVjKZiV39/PpNb631Wae/6qjf34Zcj/AfPtNxPcL17azHWftZN7PuZ10XRYZtXzJHntHyfoxxtPO+yHhXcHbsOdo520n2Im/kzK7jOhvjwwVaRu3j/tSJGpiGXKs3P4vIGrV8FT7TKK5nutGL5sHYC/umhw+zrmZ9JPqZBvShzcwJz8X/Zn40zkPLfcj1KqZMG+5Nj+6k77heNS/s37yWcRqTnYHNOjWJjJGTTKYTNX2a9Sz1In2Sm/6L98m4lzPNMi/eP856k3oPe3NOmQPm121WIl+Wu6y4bsXHs6u8PNp/RvJlPNVMrPRbcTFfIqvx8WxX5/w560vqO9GGZ17lBT1IvTh3A/tl7y/6yDKd7OYhMppnK+/Z/Fme2O/Gyn05J5ZjljeZrzKdrafsHIx/0zB7j9I7xm/esvyt1slmZ2PMtGZGmD70fJUBuwv0tPlhf5an9k6llwb2Nn3Z+8ozGb99p05VfmReW3nI5oT9GBM1snen9cOy88iymr6qtK5yIMsd8wlnIvNENofsp9LW8nKlozFavsXPH6Fe+Bo=
+   eJztw8EJAAAMA6Ej+w/dIfpVcNVUVVX1+QDIvQcx
   </data>
  </layer>
- <layer name="Block" width="40" height="23" opacity="0.59">
+ <layer name="Block" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJztzsERREAYBeGZJFjiwG4c2M1BjAgEiVgc9HEOVLn5S73D1+f2zjkvIiKXzfhjwYrNwFMoIjFeSJD6+59CGclR4I2Psb+SVKjxxc/Yn4hIqPH3P5xp0aE38HJkwIjJwMuT7DY9EMU=
-  </data>
- </layer>
- <layer name="Deco" width="40" height="23">
-  <data encoding="base64" compression="zlib">
-   eJztzrEVABAMRdFk/3kwCAbBAn6jS+2keMXtr5uZAwAAAJ8VqdISXCJdhswEl8iSLSfBBXguPxMLBA==
+   eJztlDkOACAIBDH6/zdb2RgPYMEjodjGKDtyZSLKoa+VOt2K2b+Z6RQf1/sEH5KLV+r7K18xYhoxvhTHk29XD21fc/2SwMuSjzu37bxM7krzJxVST06vaP0s+VZxkHxI98OqLyVxUD/Ofzx2M8rnxaHlQ+fJmu82D1rfUKipAhV5CWc=
   </data>
  </layer>
 </map>
