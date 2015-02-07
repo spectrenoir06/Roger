@@ -10,7 +10,7 @@ function Game:initialize(i)
 	self.map = Map:new("map/"..i..".json","map/tileset.png")
 	self.perso = Perso:new(3*32, 12*32, self)
 	self:initPerso()
-	self.nxtlvlSound = love.audio.newSource("sfx/0.wav", "static")
+	self.nxtlvlSound = love.audio.newSource("sfx/nxtl.wav", "static")
 	self.mapNb = 1
 end
 
