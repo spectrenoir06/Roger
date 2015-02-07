@@ -25,7 +25,7 @@ function Game:initPerso()
 			end
 		end
 	end
-	self.perso:Unfog()
+	self.perso:unfog()
 end
 
 function Game:update(dt)

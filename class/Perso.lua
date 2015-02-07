@@ -159,7 +159,7 @@ function Perso:useBlock(x, y, block)
 end
 
 function Perso:stop()
-    self:Unfog()
+    self:unfog()
     print(self:getCase())
     local sol, mur = self:getCase()
     if sol == 10 then
