@@ -19,10 +19,10 @@ end
 function Game:draw()
 	self.map:draw(0,0)
 
-	for k,v in ipairs(self.batiments) do
-		print(k,v)
-		v.draw()
-	end
+	---for k,v in ipairs(self.batiments) do
+	--	print(k,v)
+	--	v.draw()
+	--end
 end
 
 function Game:newBatiment(x,y)
