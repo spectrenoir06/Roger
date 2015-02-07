@@ -9,6 +9,10 @@ local Game = class('Game')
 function Game:initialize(i)
 	self.map = Map:new("map/"..i..".json","map/tileset.png")
 	self.perso = Perso:new(3*32, 12*32, self)
+	self.imgKey = love.graphics.newImage("texture/key.png")
+	self.imgSword1 = love.graphics.newImage("texture/sword1.png")
+	self.imgSword2 = love.graphics.newImage("texture/sword2.png")
+	self.imgSword3 = love.graphics.newImage("texture/sword3.png")
 	self:soundInit()
 	self:initPerso()
 	self.mapNb = 1
@@ -45,7 +49,20 @@ end
 function Game:draw()
 	self.map:draw(0,0)
 	self.perso:draw()
-	love.graphics.print( "Key : "..self.perso.keynb.."  Bonus : "..self.perso.attbon.." level : "..self.mapNb, 10, 10)
+	-- love.graphics.print( "Key : "..self.perso.keynb.."  Bonus : "..self.perso.attbon.." level : "..self.mapNb, 10, 10)
+	for i = 1, self.perso.keynb do
+		love.graphics.draw(self.imgKey, i * 24 - 24, 2)
+	end
+	for j = 1, self.perso.sword1 do
+		love.graphics.draw(self.imgSword1, j * 24 - 24, 62)
+	end
+	for k = 1, self.perso.sword2 do
+		love.graphics.draw(self.imgSword2, l * 24 - 24, 122)
+	end
+	for l = 1, self.perso.sword3 do
+		love.graphics.draw(self.imgSword3, l * 24 - 24, 182)
+	end
+	-- love.graphics.draw(self.imgSword, 80, 2)
 end
 
 function Game:nextMap()

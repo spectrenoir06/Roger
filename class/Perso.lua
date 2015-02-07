@@ -28,7 +28,9 @@ function Perso:initialize(posX, posY, game)
 	self.sprite:addAnimation({6,7,8})
 
     self.keynb = 0
-    self.attbon = 0
+    self.sword1 = 0
+    self.sword2 = 0
+    self.sword3 = 0
 
 end
 
@@ -190,15 +192,15 @@ function Perso:stop()
         self.keynb = self.keynb + 1
     elseif mur == 7 then            -- epee 1
         self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
-        self.attbon = self.attbon + 20
+        self.sword1 = self.sword1 + 1
         self.game.swordSound:play()
     elseif mur == 8 then            -- epee 2
         self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
-        self.attbon = self.attbon + 50
+        self.sword2 = self.sword2 + 1
         self.game.swordSound:play()
-    elseif mur == 9 then            -- eppe 3
+    elseif mur == 9 then            -- epee 3
         self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
-        self.attbon = self.attbon + 100
+        self.sword3 = self.sword3 + 1
         self.game.swordSound:play()
     end
 end
