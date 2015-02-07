@@ -21,6 +21,7 @@ function Game:soundInit()
 	self.music:setVolume(0.8)
 	self.walkSound = love.audio.newSource("sfx/walk.mp3", "static")
 	self.music:play()
+	self.swordSound = love.audio.newSource("sfx/sword.mp3", "static")
 end
 
 function Game:initPerso()
@@ -44,7 +45,7 @@ end
 function Game:draw()
 	self.map:draw(0,0)
 	self.perso:draw()
-	love.graphics.print( "Key : "..self.perso.keynb.."  level : "..self.mapNb, 10, 10)
+	love.graphics.print( "Key : "..self.perso.keynb.."  Bonus : "..self.perso.attbon.." level : "..self.mapNb, 10, 10)
 end
 
 function Game:nextMap()
