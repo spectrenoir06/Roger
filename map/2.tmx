@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="40" height="23" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="32" tileheight="32" nextobjectid="1">
  <properties>
   <property name="musique" value=""/>
  </properties>
@@ -8,7 +8,7 @@
  </tileset>
  <layer name="Sol" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJztzjEKACAMBMEj4P+/nNZK7BQyxbTLVpIaYm1ev5wef+oAAADcao3EB0A=
+   eJztzrEJAAAIA7Ai+P/LviGaIXsqSXFOLzgAAAC/DO5VBzQ=
   </data>
  </layer>
  <layer name="Block" width="40" height="23">
@@ -16,7 +16,7 @@
    eJzdlMEOwzAIQzM1Urf+/wdPvUUIY5tlh+3AIU2BhwkcY4zjz+yxmPK9G7/KGy3+99rEp+Zk/942xRhMb5Xjk1qQTTFuVc8Orbt8it4qa2dGMj617y4fszOJjXK5un5DP3fv3OcnqD3zz/jUGtkMXCa308uzyM38O2+40k+pEfW0y+i8LTR/kSfb1Uhrl7/ic+vdrR/z6/bDYVvvYr/Q3lJnleVke2eGe0c/RQPGjnxWTSo+VYNsXrr6urPgxEd96vTfeQ9K/OhbndG+QRydmXdjdHvN9FPft3pW4jkcv2Rv9eAIUA==
   </data>
  </layer>
- <layer name="Fog" width="40" height="23" opacity="0.44">
+ <layer name="Fog" width="40" height="23" opacity="0.73">
   <data encoding="base64" compression="zlib">
    eJztwzENAAAMBKGb3r/kiugKCaumqqqqzwc9lRWR
   </data>
