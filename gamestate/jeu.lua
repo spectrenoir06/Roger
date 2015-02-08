@@ -3,7 +3,7 @@ local class = require 'class/middleclass'
 local Game = require "class/Game"
 local Gamestate = require "class/gamestate"
 function jeu:enter()
-    game = Game:new(1)
+    game = Game:new(0)
 end
 
 function jeu:update(dt)

@@ -209,7 +209,7 @@ function Perso:attack(monster)
   elseif monster == 2 then
     mDefense = math.random(8, 12)
     mAttack = math.random(2, 4)
-  elseif monster == 2 then
+  elseif monster == 3 then
     mDefense = math.random(12, 16)
     mAttack = math.random(4, 6)
   end

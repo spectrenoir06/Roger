@@ -18,7 +18,7 @@ function Game:initialize(i)
 	self.imgCoin = love.graphics.newImage("texture/coin.png")
 	self:soundInit()
 	self:initPerso()
-	self.mapNb = 1
+	self.mapNb = 0
 	love.graphics.setNewFont(24)
 end
 
