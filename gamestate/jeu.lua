@@ -17,7 +17,8 @@ end
 
 function jeu:keypressed(key)
     if key == 'escape' then
-        love.event.quit()
+        game.music:stop()
+        Gamestate.pop()
     else
         print(key)
         game:keypressed(key)
