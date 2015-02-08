@@ -19,6 +19,7 @@ function Game:initialize(i)
 	self:soundInit()
 	self:initPerso()
 	self.mapNb = 1
+	love.graphics.setNewFont(24)
 end
 
 function Game:soundInit()
@@ -76,9 +77,11 @@ function Game:draw()
 	for i = 1, self.perso.rubynb do
 		love.graphics.draw(self.imgRuby, i * 24 - 24, 302)
 	end
-	for i = 1, self.perso.coinnb do
-		love.graphics.draw(self.imgCoin, i * 16 - 16, 362)
-	end
+	--for i = 1, self.perso.coinnb do
+	--	love.graphics.draw(self.imgCoin, i * 16 - 16, 362)
+	--end
+	love.graphics.draw(self.imgCoin, 4, 362)
+	love.graphics.print( "x" .. game.perso.coinnb, 48, 370)
 end
 
 function Game:nextMap()
