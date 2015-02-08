@@ -24,10 +24,6 @@ function Game:imginit()
 	self.imgSword3 = love.graphics.newImage("texture/sword3.png")
 	self.imgRuby = love.graphics.newImage("texture/ruby.png")
 	self.imgCoin = love.graphics.newImage("texture/coin.png")
-	self:soundInit()
-	self:initPerso()
-	self.mapNb = 1
-	love.graphics.setNewFont(24)
 end
 
 function Game:soundInit()
