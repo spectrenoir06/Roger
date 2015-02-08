@@ -193,20 +193,20 @@ end
 
 function Perso:attack(monster)
   --print(self.direction)
-  local mLife, mAttack, pAttack
+  local mDefense, mAttack, pAttack
   pAttack = self.sword1 + self.sword2 * 2 + self.sword3 * 4
   if monster == 0 then
-    mLife = 2
-    mAttack = 2
+    mDefense = 1
+    mAttack = 1
   elseif monster == 1 then
-    mLife = 8
+    mDefense = 8
     mAttack = 6
   elseif monster == 2 then
-    mLife = 20
+    mDefense = 20
     mAttack = 12
   end
 
-  if pAttack >= mLife then
+  if pAttack > mDefense then
     self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
     self.coinnb = self.coinnb + 1
     self.game.swordSound:play()
