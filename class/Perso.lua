@@ -212,6 +212,7 @@ function Perso:stop()
     elseif mur == 12 then            -- ruby
         self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
         self.coinnb = self.coinnb + 1
+        self.game.coinSound:play()
     end
 end
 
