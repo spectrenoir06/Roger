@@ -13,7 +13,7 @@
  </layer>
  <layer name="Block" width="40" height="23">
   <data encoding="base64" compression="zlib">
-   eJzNlFELwyAMhB0VHNv6///u6IMgYuJ30UIfQovE5HK580gpHQ+PVxN314n0unJLcy93dUYxy7HwXN8fqL+LPw9Lj0fhmJyp+Og+yR3ap9Z+g93t4sK6sxJeHYrvhDPPcKv51gwjfCfso2qzx1K6PsSTEf4UfB7fnr5n50RH3u7yJGcHvu/gTNFUdAfEQx5Pnr/a/KrtmTYp9pFe2/8i1Ku9o/gy6JGFeuq+Lb3O3iDKp6ov5Q1cxef1ojzW3Vv4Pga3RFOej+4K4peIbxRPRPApmiE96CwWhhXdk7mIX9W3QOF1txarj3ovPTn+FUAI5w==
+   eJzNltEKwzAIRTMa6FjX1+b//3QUFhCn5l6bwh5kJU30RK92Syll+XN7CLvbTybWuXcV56ryY5nccxjvPZ7z9w34n5W/iEXzMDlG1lg+tJ7IGTRO9/0EajcrF94Zy5p4tnQWMXvsHt8O3nnEze737uDxHUAcVpuaRc4Dy4fFnckfwxflO9L3aB3RUVS7auw5jLNX+DZjzWNt5fc+2RogPRTlKeovuX//2kibKLulV/m8Ev56TrN8FYhRCX/IDLH4tV5HMwjNJ6svdAbKHmrGe4QvioXmsevTu8PLya300YIaonWfZUi/ZPqG6YkMH6IZNCZzF48ho3v97Ua0iPwf133C8DG9cFV3fc7frfFZ9gHIGgnz
   </data>
  </layer>
  <layer name="Fog" width="40" height="23" opacity="0.67">
