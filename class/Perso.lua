@@ -191,6 +191,11 @@ function Perso:useBlock(x, y, block)
 
 end
 
+function Perso:die()
+  print("NOOB")
+  love.event.quit()
+end
+
 function Perso:attack(monster)
   --print(self.direction)
   local mDefense, mAttack, pAttack
@@ -204,6 +209,9 @@ function Perso:attack(monster)
   elseif monster == 2 then
     mDefense = 20
     mAttack = 12
+  elseif monster == 2 then
+    mDefense = 42
+    mAttack = 20
   end
 
   if pAttack > mDefense then
@@ -225,6 +233,9 @@ function Perso:attack(monster)
     elseif self.direction == 4 then
       self.direction = 3
       self:left()
+    end
+    if self.life <= 0 then
+      self:die()
     end
   end
 end
