@@ -4,7 +4,7 @@ local class = require 'class/middleclass'
 local Game = require "class/Game"
 
 function jeu:init()
-    game = Game:new(0)
+    game = Game:new(1)
 end
 
 function jeu:update(dt)
