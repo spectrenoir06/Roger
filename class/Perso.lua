@@ -205,13 +205,13 @@ function Perso:attack(monster)
     mAttack = 1
   elseif monster == 1 then
     mDefense = math.random(6, 10)
-    mAttack = math.random(3, 6)
+    mAttack = math.random(2, 4)
   elseif monster == 2 then
-    mDefense = math.random(20, 25)
-    mAttack = math.random(8, 12)
+    mDefense = math.random(14, 18)
+    mAttack = math.random(8, 10)
   elseif monster == 2 then
-    mDefense = math.random(42, 50)
-    mAttack = math.random(16, 24)
+    mDefense = math.random(20, 24)
+    mAttack = math.random(12, 16)
   end
 
   if pAttack > mDefense then
