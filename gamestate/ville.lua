@@ -4,6 +4,10 @@ local Gamestate = require 'class/gamestate'
 
 tab = {}
 
+function ville:enter()
+
+end
+
 function ville:init()
     tab[1] = {text = love.graphics.newImage("texture/buildings/castle1.png"), name = "Castle", level = 1, prix = "100$", time=0}
     tab[2] = {text = love.graphics.newImage("texture/buildings/tower1.png"), name = "Tower", level = 1, prix = "in progress", time=os.time() + 5844 - (3660)}
@@ -13,7 +17,8 @@ function ville:init()
     tab.savings = love.graphics.newImage("texture/buildings/saving.png")
     tab.ruby = love.graphics.newImage("texture/buildings/ruby.PNG")
     temp2 = os.time() + 5844 - (3660)
-    love.graphics.setNewFont(18)
+    tune=95;
+    ruby=0
 end
 
 function ville:update(dt)
@@ -21,7 +26,7 @@ function ville:update(dt)
 end
 
 function ville:draw()
-
+    love.graphics.setNewFont(18)
     --print(tab.name)
     for k,v in ipairs(tab) do
         --print(k,v)
@@ -34,6 +39,9 @@ function ville:draw()
             love.graphics.draw(tab.sablier, 0, (k-1)*200)
             love.graphics.print(os.date("%X",v.time - os.time()), 200,(k-1)*200 + 100)
             love.graphics.draw(tab.ruby, 425, (k-1)*200+50)
+            if (k==1) then
+                love.graphics.draw(tab.ruby, 450, (k-1)*200+50)
+            end
             love.graphics.draw(tab.savings, 425, (k-1)*200+100)
         end
 
@@ -43,7 +51,7 @@ end
 
 function ville:mousepressed(x,y,button)
     print(x,y,button)
-    if (x>= 240 and x < (240+100) and (y>=100 and y<=200 )) then
+    if (x>= 240 and x < (240+100) and (y>=100 and y<=200 ) and tab[1].level==1) then
         tab[1].prix="in progress"
         tab[1].time = os.time() + 12674 - (3660)
     end
