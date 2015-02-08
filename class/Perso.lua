@@ -125,6 +125,7 @@ function Perso:up()
             if self:col(0,-1)==3 then
                 self.keynb = self.keynb - 1
                 self.game.map:setTile((self.posX/32),(self.posY/32) - 1,0,2)
+                self.game.doorSound:play()
             end
             self.move = true
             self.pixel = 0
@@ -141,6 +142,7 @@ function Perso:down()
             if self:col(0,1)==3 then
                 self.keynb = self.keynb - 1
                 self.game.map:setTile((self.posX/32),(self.posY/32) + 1,0,2)
+                self.game.doorSound:play()
             end
             self.move = true
 			self.pixel = 0
@@ -157,6 +159,7 @@ function Perso:left()
             if self:col(-1,0)==3 then
                 self.keynb = self.keynb - 1
                 self.game.map:setTile((self.posX/32) - 1,(self.posY/32),0,2)
+                self.game.doorSound:play()
             end
 			self.move = true
 			self.pixel = 0
@@ -173,6 +176,7 @@ function Perso:right()
             if self:col(1,0)==3 then
                 self.keynb = self.keynb - 1
                 self.game.map:setTile((self.posX/32) + 1,(self.posY/32),0,2)
+                self.game.doorSound:play()
             end
 			self.move = true
 			self.pixel = 0
