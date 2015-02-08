@@ -18,6 +18,8 @@ function ville:init()
     tab.savings = love.graphics.newImage("texture/buildings/saving.png")
     tab.ruby = love.graphics.newImage("texture/buildings/ruby.PNG")
     tab.coin = love.graphics.newImage("texture/coin.png")
+    self.isPopep = -1
+    self.imgPopep = love.graphics.newImage("popup/popupepargne.png")
     temp2 = os.time() + 5844 - (3660)
 
     item = {ruby = 2, coin =90}
@@ -59,6 +61,9 @@ function ville:draw()
     love.graphics.print(item.coin, 1050, 155)
 
     love.graphics.setBackgroundColor( 39, 53, 53)
+    if self.isPopep == 1 then
+        love.graphics.draw(self.imgPopep, 320, 180)
+    end
 end
 
 function ville:mousepressed(x,y,button)
@@ -75,7 +80,6 @@ function ville:mousepressed(x,y,button)
         tab[1].time=0
         item.ruby = item.ruby - 2
     end
-
 end
 
 function ville:keypressed(key)
@@ -84,5 +88,8 @@ function ville:keypressed(key)
         Gamestate.push(jeu, item)
     elseif key == 'escape' then
         love.event.quit()
+    end
+    if key == 't' then
+        self.isPopep = 1
     end
 end

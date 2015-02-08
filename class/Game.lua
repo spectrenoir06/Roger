@@ -39,6 +39,7 @@ function Game:soundInit()
 
 	self.walkSound = love.audio.newSource("sfx/walk.mp3", "static")
 	self.swordSound = love.audio.newSource("sfx/sword.mp3", "static")
+	self.swingSound = love.audio.newSource("sfx/swing.mp3", "static")
 	self.coinSound = love.audio.newSource("sfx/coin.wav", "static")
 	self.doorSound = love.audio.newSource("sfx/door.wav", "static")
 end
