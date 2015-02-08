@@ -1,6 +1,6 @@
 local Gamestate = require 'class/gamestate'
- jeu = require 'gamestate/jeu'
- ville = require 'gamestate/ville'
+require 'gamestate/jeu'
+require 'gamestate/ville'
 
 function love.load()
 	Gamestate.registerEvents()
