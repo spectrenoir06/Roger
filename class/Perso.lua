@@ -214,6 +214,7 @@ function Perso:attack(monster)
     mAttack = math.random(4, 6)
   end
 
+  self.game.swingSound:play()
   if pAttack > mDefense then
     self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
     if math.random(0,5) == 0 then
@@ -221,7 +222,6 @@ function Perso:attack(monster)
     else
       self.coinnb = self.coinnb + 1
     end
-    self.game.swordSound:play()
   else
     self.life = self.life - mAttack
     self.move = false
