@@ -32,6 +32,7 @@ function Perso:initialize(posX, posY, game)
     self.sword2 = 0
     self.sword3 = 0
     self.rubynb = 0
+    self.coinnb = 0
 
 end
 
@@ -206,6 +207,9 @@ function Perso:stop()
     elseif mur == 11 then            -- ruby
         self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
         self.rubynb = self.rubynb + 1
+    elseif mur == 12 then            -- ruby
+        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+        self.coinnb = self.coinnb + 1
     end
 end
 

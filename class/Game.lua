@@ -14,6 +14,7 @@ function Game:initialize(i)
 	self.imgSword2 = love.graphics.newImage("texture/sword2.png")
 	self.imgSword3 = love.graphics.newImage("texture/sword3.png")
 	self.imgRuby = love.graphics.newImage("texture/ruby.png")
+	self.imgCoin = love.graphics.newImage("texture/coin.png")
 	self:soundInit()
 	self:initPerso()
 	self.mapNb = 1
@@ -66,6 +67,9 @@ function Game:draw()
 	end
 	for i = 1, self.perso.rubynb do
 		love.graphics.draw(self.imgRuby, i * 24 - 24, 242)
+	end
+	for i = 1, self.perso.coinnb do
+		love.graphics.draw(self.imgCoin, i * 16 - 16, 302)
 	end
 	-- love.graphics.draw(self.imgSword, 80, 2)
 end
