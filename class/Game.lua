@@ -9,6 +9,14 @@ local Game = class('Game')
 function Game:initialize(i)
 	self.map = Map:new("map/"..i..".json","map/tileset.png")
 	self.perso = Perso:new(3*32, 12*32, self)
+	self:imginit()
+	self:soundInit()
+	self:initPerso()
+	self.mapNb = 1
+	love.graphics.setNewFont(24)
+end
+
+function Game:imginit()
 	self.imgHeart = love.graphics.newImage("texture/heart.png")
 	self.imgKey = love.graphics.newImage("texture/key.png")
 	self.imgSword1 = love.graphics.newImage("texture/sword1.png")
