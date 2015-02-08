@@ -22,12 +22,15 @@ end
 function Game:soundInit()
 	self.nxtlvlSound = love.audio.newSource("sfx/nxtl.wav", "static")
 	self.nxtlvlSound:setVolume(0.5)
+
 	self.music = love.audio.newSource("sfx/dungeon.ogg", "static")
 	self.music:setVolume(0.8)
 	self.music:setLooping(true)
-	self.walkSound = love.audio.newSource("sfx/walk.mp3", "static")
 	self.music:play()
+
+	self.walkSound = love.audio.newSource("sfx/walk.mp3", "static")
 	self.swordSound = love.audio.newSource("sfx/sword.mp3", "static")
+	self.coinSound = love.audio.newSource("sfx/coin.wav", "static")
 end
 
 function Game:initPerso()
