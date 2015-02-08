@@ -27,6 +27,8 @@ function Perso:initialize(posX, posY, game)
 	self.sprite:addAnimation({3,4,5})
 	self.sprite:addAnimation({6,7,8})
 
+    self.life = 10
+
     self.keynb = 0
     self.sword1 = 0
     self.sword2 = 0
@@ -185,35 +187,51 @@ function Perso:useBlock(x, y, block)
 
 end
 
+function Perso:attack(monster)
+  if monster == 0 then
+  elseif monster == 1 then
+  elseif monster == 2 then
+  end
+end
+
 function Perso:stop()
-    self:unfog()
-    print(self:getCase())
-    local sol, mur = self:getCase()
-    if sol == 10 then               -- escalier
-        self.game:nextMap()
-    elseif mur == 6 then            -- clef
-        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
-        self.keynb = self.keynb + 1
-    elseif mur == 7 then            -- epee 1
-        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
-        self.sword1 = self.sword1 + 1
-        self.game.swordSound:play()
-    elseif mur == 8 then            -- epee 2
-        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
-        self.sword2 = self.sword2 + 1
-        self.game.swordSound:play()
-    elseif mur == 9 then            -- epee 3
-        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
-        self.sword3 = self.sword3 + 1
-        self.game.swordSound:play()
-    elseif mur == 11 then            -- ruby
-        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
-        self.rubynb = self.rubynb + 1
-    elseif mur == 12 then            -- ruby
-        self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
-        self.coinnb = self.coinnb + 1
-        self.game.coinSound:play()
-    end
+  self:unfog()
+  print(self:getCase())
+  local sol, mur = self:getCase()
+  if sol == 10 then               -- escalier
+    self.game:nextMap()
+  elseif mur == 6 then            -- clef
+    self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    self.keynb = self.keynb + 1
+  elseif mur == 7 then            -- epee 1
+    self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    self.sword1 = self.sword1 + 1
+    self.game.swordSound:play()
+  elseif mur == 8 then            -- epee 2
+    self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    self.sword2 = self.sword2 + 1
+    self.game.swordSound:play()
+  elseif mur == 9 then            -- epee 3
+    self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    self.sword3 = self.sword3 + 1
+    self.game.swordSound:play()
+  elseif mur == 11 then            -- ruby
+    self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    self.rubynb = self.rubynb + 1
+  elseif mur == 12 then            -- coin
+    self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    self.coinnb = self.coinnb + 1
+    self.game.coinSound:play()
+  elseif mur == 13 then            -- treasure
+    self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    self.coinnb = self.coinnb + 10
+    self.game.coinSound:play()
+  elseif mur == 14 then            -- heart
+    self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    self.life = self.life + 1
+  elseif mur >= 20 and mur <= 22 then
+    self.attack(mur - 20)
+  end
 end
 
 function Perso:getPosX()
