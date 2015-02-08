@@ -64,7 +64,7 @@ end
 function Game:draw()
 	self.map:draw(0,0)
 	self.perso:draw()
-	-- love.graphics.print( "Key : "..self.perso.keynb.."  Bonus : "..self.perso.attbon.." level : "..self.mapNb, 10, 10)
+
 	for i = 1, self.perso.life do
 		love.graphics.draw(self.imgHeart, i * 24 - 24, 2)
 	end
@@ -83,9 +83,6 @@ function Game:draw()
 	for i = 1, self.perso.rubynb do
 		love.graphics.draw(self.imgRuby, i * 24 - 24, 302)
 	end
-	--for i = 1, self.perso.coinnb do
-	--	love.graphics.draw(self.imgCoin, i * 16 - 16, 362)
-	--end
 	love.graphics.draw(self.imgCoin, 4, 362)
 	love.graphics.print( "x" .. game.perso.coinnb, 48, 370)
 	if self.isPop == 1 then
@@ -93,19 +90,6 @@ function Game:draw()
 	end
 
 end
-
--- function Game:popup()
--- 	-- love.graphics.draw(self.imgPop, 320, 180)
---
--- 	if self.isPop == 1 then
--- 		return 1
--- 	elseif self.isPop == 0 then
--- 		return 0
--- end
-
--- function Game:popup1()
--- 	self.isPop = -self.isPop
--- end
 
 function Game:nextMap()
 	self.isPop = 1
