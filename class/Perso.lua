@@ -188,9 +188,40 @@ function Perso:useBlock(x, y, block)
 end
 
 function Perso:attack(monster)
+  --print(self.direction)
+  local mLife, mAttack, pAttack
+  pAttack = self.sword1 + self.sword2 * 2 + self.sword3 * 4
   if monster == 0 then
+    mLife = 2
+    mAttack = 2
   elseif monster == 1 then
+    mLife = 8
+    mAttack = 6
   elseif monster == 2 then
+    mLife = 20
+    mAttack = 12
+  end
+
+  if pAttack >= mLife then
+    self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
+    self.coinnb = self.coinnb + 1
+    self.game.swordSound:play()
+  else
+    self.life = self.life - mAttack
+    self.move = false
+    if self.direction == 1 then
+      self.direction = 2
+      self:down()
+    elseif self.direction == 2 then
+      self.direction = 1
+      self:up()
+    elseif self.direction == 3 then
+      self.direction = 4
+      self:right()
+    elseif self.direction == 4 then
+      self.direction = 3
+      self:left()
+    end
   end
 end
 
@@ -230,7 +261,7 @@ function Perso:stop()
     self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
     self.life = self.life + 1
   elseif mur >= 20 and mur <= 22 then
-    self.attack(mur - 20)
+    self:attack(mur - 20)
   end
 end
 
