@@ -279,7 +279,7 @@ function Perso:stop()
   elseif mur == 14 then            -- heart
     self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
     self.life = self.life + 1
-  elseif mur >= 20 and mur <= 22 then
+  elseif mur >= 20 and mur <= 23 then
     self:attack(mur - 20)
   end
 end
