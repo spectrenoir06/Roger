@@ -10,6 +10,7 @@ function ville:enter(r_rubynb, r_coinnb)
 end
 
 function ville:init()
+	logo = love.graphics.newImage("texture/logo.png")
     tab[1] = {text = love.graphics.newImage("texture/buildings/castle1.png"), name = "Castle", level = 1, prix = "100$", time=0}
     tab[2] = {text = love.graphics.newImage("texture/buildings/tower1.png"), name = "Tower", level = 1, prix = "in progress", time=os.time() + 5844 - (3660)}
     tab[3] = {text = love.graphics.newImage("texture/buildings/farm2.png"), name = "Farm", level = 2, prix = "300$", time=0}
@@ -30,6 +31,7 @@ function ville:update(dt)
 end
 
 function ville:draw()
+	love.graphics.draw(logo, 600, 300)
     love.graphics.setNewFont(18)
     --print(tab.name)
     for k,v in ipairs(tab) do
@@ -80,6 +82,9 @@ function ville:mousepressed(x,y,button)
         tab[1].time=0
         item.ruby = item.ruby - 2
     end
+    if (x>= 425 and x < (425+100) and (y>=300 and y<=350 )) then
+        self.isPopep = 1
+    end
 end
 
 function ville:keypressed(key)
@@ -90,6 +95,10 @@ function ville:keypressed(key)
         love.event.quit()
     end
     if key == 't' then
-        self.isPopep = 1
+        self.isPopep = -self.isPopep
+        tab[2].prix="300$"
+        tab[2].text=love.graphics.newImage("texture/buildings/tower2.png")
+        tab[2].level=2
+        tab[2].time=0
     end
 end
