@@ -19,14 +19,18 @@ function jeu:draw()
     game:draw()
 end
 
+function jeu:quit()
+    game.music:stop()
+    keynb = self.keynb
+    ptr.ruby = game.perso.rubynb
+    ptr.coin = game.perso.coinnb
+    game.walkSound:stop()
+    Gamestate.pop()
+end
+
 function jeu:keypressed(key)
     if key == 'escape' then
-        game.music:stop()
-        ptr.ruby = game.perso.rubynb
-        ptr.coin = game.perso.coinnb
-        game.walkSound:stop()
-        Gamestate.pop()
-
+        self:quit()
     else
         print(key)
         game:keypressed(key)

@@ -103,6 +103,7 @@ function Game:keypressed(key)
 		self:initPerso()
 		self.nxtlvlSound:play()
 	elseif self.isPop == 1  and key == "n" then
+		jeu:quit()
 	end
 end
 
