@@ -85,7 +85,7 @@ function Game:draw()
 	--	love.graphics.draw(self.imgCoin, i * 16 - 16, 362)
 	--end
 	love.graphics.draw(self.imgCoin, 4, 362)
-	-- love.graphics.print( "x" .. game.perso.coinnb, 48, 370)
+	love.graphics.print( "x" .. game.perso.coinnb, 48, 370)
 end
 
 function Game:nextMap()
