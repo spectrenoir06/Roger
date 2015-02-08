@@ -201,17 +201,17 @@ function Perso:attack(monster)
   local mDefense, mAttack, pAttack
   pAttack = self.sword1 + self.sword2 * 2 + self.sword3 * 4
   if monster == 0 then
-    mDefense = math.random(0, 2)
+    mDefense = math.random(0, 4)
     mAttack = 1
   elseif monster == 1 then
     mDefense = math.random(4, 8)
-    mAttack = math.random(1, 3)
+    mAttack = math.random(1, 2)
   elseif monster == 2 then
     mDefense = math.random(8, 12)
-    mAttack = math.random(3, 6)
+    mAttack = math.random(2, 4)
   elseif monster == 2 then
     mDefense = math.random(12, 16)
-    mAttack = math.random(6, 9)
+    mAttack = math.random(4, 6)
   end
 
   if pAttack > mDefense then
