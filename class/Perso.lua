@@ -205,7 +205,7 @@ function Perso:stop()
         self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
         self.sword3 = self.sword3 + 1
         self.game.swordSound:play()
-    elseif mur == 12 then            -- ruby
+    elseif mur == 11 then            -- ruby
         self.game.map:setTile(self.posX/32, self.posY/32, 0, 2)
         self.rubynb = self.rubynb + 1
     end
