@@ -13,6 +13,7 @@ function Game:initialize(i)
 	self:soundInit()
 	self:initPerso()
 	self.mapNb = 1
+	self.isPop = -1
 	love.graphics.setNewFont(24)
 end
 
@@ -24,6 +25,7 @@ function Game:imginit()
 	self.imgSword3 = love.graphics.newImage("texture/sword3.png")
 	self.imgRuby = love.graphics.newImage("texture/ruby.png")
 	self.imgCoin = love.graphics.newImage("texture/coin.png")
+	self.imgPop = love.graphics.newImage("popup/popup.png")
 end
 
 function Game:soundInit()
@@ -86,17 +88,38 @@ function Game:draw()
 	--end
 	love.graphics.draw(self.imgCoin, 4, 362)
 	love.graphics.print( "x" .. game.perso.coinnb, 48, 370)
+	if self.isPop == 1 then
+		love.graphics.draw(self.imgPop, 320, 180)
+	end
+
 end
 
+-- function Game:popup()
+-- 	-- love.graphics.draw(self.imgPop, 320, 180)
+--
+-- 	if self.isPop == 1 then
+-- 		return 1
+-- 	elseif self.isPop == 0 then
+-- 		return 0
+-- end
+
+-- function Game:popup1()
+-- 	self.isPop = -self.isPop
+-- end
+
 function Game:nextMap()
-	self.mapNb = self.mapNb + 1
-	self.map = Map:new("map/"..self.mapNb..".json","map/tileset.png")
-	self:initPerso()
-	self.nxtlvlSound:play()
+	self.isPop = 1
 end
 
 function Game:keypressed(key)
-
+	if self.isPop == 1  and key == "y" then
+		self.isPop = 0
+		self.mapNb = self.mapNb + 1
+		self.map = Map:new("map/"..self.mapNb..".json","map/tileset.png")
+		self:initPerso()
+		self.nxtlvlSound:play()
+	elseif self.isPop == 1  and key == "n" then
+	end
 end
 
 return Game
