@@ -42,9 +42,13 @@ function ville:draw()
         if (v.prix ~= "in progress") then
             love.graphics.draw(screw, 240, (k-1)*200 + 100)
         else
+        	love.graphics.draw(tab.ruby, 425, (k-1)*200+50)	
             love.graphics.draw(tab.sablier, 0, (k-1)*200)
             love.graphics.print(os.date("%X",v.time - os.time()), 200,(k-1)*200 + 100)
-            love.graphics.draw(tab.ruby, 425, (k-1)*200+50)
+            if (k==2) then
+            	love.graphics.draw(tab.ruby, 450, (k-1)*200+50)
+            	love.graphics.draw(tab.ruby, 475, (k-1)*200+50)
+            end
             if (k==1) then
                 love.graphics.draw(tab.ruby, 450, (k-1)*200+50)
             end
