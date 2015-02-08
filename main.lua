@@ -4,5 +4,5 @@ local Gamestate = require 'class/gamestate'
 
 function love.load()
 	Gamestate.registerEvents()
-	Gamestate.switch(jeu)
+	Gamestate.switch(ville)
 end
