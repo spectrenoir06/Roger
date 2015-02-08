@@ -199,7 +199,7 @@ end
 function Perso:attack(monster)
   --print(self.direction)
   local mDefense, mAttack, pAttack
-  pAttack = self.sword1 + self.sword2 * 2 + self.sword3 * 4
+  pAttack = 1+self.sword1*2 + self.sword2 * 4 + self.sword3 * 8
   if monster == 0 then
     mDefense = math.random(0, 4)
     mAttack = 1
