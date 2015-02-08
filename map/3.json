@@ -28,7 +28,7 @@
          "name":"Fog",
          "opacity":0.670000016689301,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
