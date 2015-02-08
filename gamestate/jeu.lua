@@ -1,8 +1,9 @@
-local jeu = {}
+jeu = {}
+local Gamestate = require 'class/gamestate'
 local class = require 'class/middleclass'
 local Game = require "class/Game"
-local Gamestate = require "class/gamestate"
-function jeu:enter()
+
+function jeu:init()
     game = Game:new(1)
 end
 
@@ -22,5 +23,3 @@ function jeu:keypressed(key)
         game:keypressed(key)
     end
 end
-
-return jeu

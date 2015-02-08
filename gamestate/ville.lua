@@ -1,7 +1,6 @@
-local ville = {}
+ville = {}
 local class = require 'class/middleclass'
-local Gamestate = require "class.gamestate"
-
+local Gamestate = require 'class/gamestate'
 
 function ville:enter()
 
@@ -23,5 +22,3 @@ function ville:keypressed(key)
         love.event.quit()
     end
 end
-
-return ville
