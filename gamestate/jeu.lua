@@ -7,6 +7,10 @@ function jeu:init()
     game = Game:new(1)
 end
 
+function jeu:enter(r_ville,item)
+    ptr = item
+end
+
 function jeu:update(dt)
     game:update(dt)
 end
@@ -18,12 +22,8 @@ end
 function jeu:keypressed(key)
     if key == 'escape' then
         game.music:stop()
-        keynb = self.keynb
-        sword1= self.sword1
-        sword2=self.sword2
-        sword3= self.sword3
-        rubynb= self.rubynb
-        coinnb = self.coinnb
+        ptr.ruby = game.perso.rubynb
+        ptr.coin = game.perso.coinnb
         game.walkSound:stop()
         Gamestate.pop()
 
