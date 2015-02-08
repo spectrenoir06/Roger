@@ -17,9 +17,10 @@ function ville:init()
     tab.sablier = love.graphics.newImage("texture/buildings/hourglass.png")
     tab.savings = love.graphics.newImage("texture/buildings/saving.png")
     tab.ruby = love.graphics.newImage("texture/buildings/ruby.PNG")
+    tab.coin = love.graphics.newImage("texture/coin.png")
     temp2 = os.time() + 5844 - (3660)
 
-    item = {ruby = 0, coin = 0}
+    item = {ruby = 2, coin =90}
 end
 
 function ville:update(dt)
@@ -48,23 +49,31 @@ function ville:draw()
 
     end
 
-    love.graphics.print(item.ruby, 1000, 100)
-    love.graphics.print(item.coin, 1050, 100)
+    for i = 1, item.ruby do
+        love.graphics.draw(tab.ruby, 1000 + (i * 24 - 24), 80)
+    end
+
+    love.graphics.draw(tab.coin,  1000, 150)
+
+    --love.graphics.print(item.ruby, 1000, 100)
+    love.graphics.print(item.coin, 1050, 155)
 
     love.graphics.setBackgroundColor( 39, 53, 53)
 end
 
 function ville:mousepressed(x,y,button)
     print(x,y,button)
-    if (x>= 240 and x < (240+100) and (y>=100 and y<=200 ) and tab[1].level==1) then
+    if (x>= 240 and x < (240+100) and (y>=100 and y<=200 ) and tab[1].level==1) and item.coin >= 100 then -- chateau
         tab[1].prix="in progress"
+        item.coin = item.coin-100
         tab[1].time = os.time() + 12674 - (3660)
     end
-    if (x>= 425 and x < (425+100) and (y>=50 and y<=100 )) then
+    if (x>= 425 and x < (425+100) and (y>=50 and y<=100 )) and item.ruby >= 2 then
         tab[1].prix="500$"
         tab[1].text=love.graphics.newImage("texture/buildings/castle2.png")
         tab[1].level=2
         tab[1].time=0
+        item.ruby = item.ruby - 2
     end
 
 end

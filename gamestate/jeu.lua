@@ -21,9 +21,8 @@ end
 
 function jeu:quit()
     game.music:stop()
-    keynb = self.keynb
-    ptr.ruby = game.perso.rubynb
-    ptr.coin = game.perso.coinnb
+    ptr.ruby = ptr.ruby + game.perso.rubynb
+    ptr.coin = ptr.coin + game.perso.coinnb
     game.walkSound:stop()
     Gamestate.pop()
 end
