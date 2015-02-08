@@ -4,8 +4,9 @@ local Gamestate = require 'class/gamestate'
 
 tab = {}
 
-function ville:enter()
-
+function ville:enter(r_rubynb, r_coinnb)
+    rubynb = r_rubynb
+    coinnb = r_coinnb
 end
 
 function ville:init()
@@ -17,8 +18,8 @@ function ville:init()
     tab.savings = love.graphics.newImage("texture/buildings/saving.png")
     tab.ruby = love.graphics.newImage("texture/buildings/ruby.PNG")
     temp2 = os.time() + 5844 - (3660)
-    tune=95;
-    ruby=0
+
+    item = {ruby = 0, coin = 0}
 end
 
 function ville:update(dt)
@@ -46,6 +47,10 @@ function ville:draw()
         end
 
     end
+
+    love.graphics.print(item.ruby, 1000, 100)
+    love.graphics.print(item.coin, 1050, 100)
+
     love.graphics.setBackgroundColor( 39, 53, 53)
 end
 
@@ -67,7 +72,7 @@ end
 function ville:keypressed(key)
     print(key)
     if (key == ' ') then
-        Gamestate.push(jeu)
+        Gamestate.push(jeu, item)
     elseif key == 'escape' then
         love.event.quit()
     end
