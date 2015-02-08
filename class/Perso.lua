@@ -204,14 +204,14 @@ function Perso:attack(monster)
     mDefense = math.random(0, 2)
     mAttack = 1
   elseif monster == 1 then
-    mDefense = math.random(5, 8)
+    mDefense = math.random(4, 8)
     mAttack = math.random(1, 3)
   elseif monster == 2 then
     mDefense = math.random(8, 12)
     mAttack = math.random(3, 6)
   elseif monster == 2 then
     mDefense = math.random(12, 16)
-    mAttack = math.random(6, 8)
+    mAttack = math.random(6, 9)
   end
 
   if pAttack > mDefense then
