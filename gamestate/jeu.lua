@@ -35,3 +35,12 @@ function jeu:keypressed(key)
         game:keypressed(key)
     end
 end
+
+function jeu:joystickpressed(joy, key)
+    if key == 4 then
+        self:quit()
+    else
+        print(key)
+        game:keypressed(key)
+    end
+end

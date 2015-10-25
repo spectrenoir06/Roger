@@ -7,6 +7,7 @@ tab = {}
 function ville:enter(r_rubynb, r_coinnb)
     rubynb = r_rubynb
     coinnb = r_coinnb
+    log = "";
 end
 
 function ville:init()
@@ -33,6 +34,7 @@ end
 function ville:draw()
 	love.graphics.draw(logo, 600, 300)
     love.graphics.setNewFont(18)
+    love.graphics.print(log,10,10)
     --print(tab.name)
     for k,v in ipairs(tab) do
         --print(k,v)
@@ -42,7 +44,7 @@ function ville:draw()
         if (v.prix ~= "in progress") then
             love.graphics.draw(screw, 240, (k-1)*200 + 100)
         else
-        	love.graphics.draw(tab.ruby, 425, (k-1)*200+50)	
+        	love.graphics.draw(tab.ruby, 425, (k-1)*200+50)
             love.graphics.draw(tab.sablier, 0, (k-1)*200)
             love.graphics.print(os.date("%X",v.time - os.time()), 200,(k-1)*200 + 100)
             if (k==2) then
@@ -96,6 +98,22 @@ function ville:keypressed(key)
     if (key == ' ') then
         Gamestate.push(jeu, item)
     elseif key == 'escape' then
+        love.event.quit()
+    end
+    if key == 't' then
+        self.isPopep = -self.isPopep
+        tab[2].prix="300$"
+        tab[2].text=love.graphics.newImage("texture/buildings/tower2.png")
+        tab[2].level=2
+        tab[2].time=0
+    end
+end
+
+function ville:joystickpressed( joystick, key )
+    print(key)
+    if (key == 1) then
+        Gamestate.push(jeu, item)
+    elseif key == 4 then
         love.event.quit()
     end
     if key == 't' then

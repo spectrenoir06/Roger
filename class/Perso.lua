@@ -36,6 +36,9 @@ function Perso:initialize(posX, posY, game)
     self.rubynb = 0
     self.coinnb = 0
 
+    joysticks = love.joystick.getJoysticks( )
+    joy = joysticks[1]
+
 end
 
 function Perso:draw()
@@ -69,13 +72,13 @@ function Perso:update(dt)
        	end
     else
         self.game.walkSound:pause()
-        if love.keyboard.isDown("up") then
+        if love.keyboard.isDown("up") or (joy and joy:isDown(12)) then
             self:up()
-        elseif love.keyboard.isDown("down") then
+        elseif love.keyboard.isDown("down") or (joy and joy:isDown(13)) then
             self:down()
-        elseif love.keyboard.isDown("left") then
+        elseif love.keyboard.isDown("left") or (joy and joy:isDown(14)) then
             self:left()
-        elseif love.keyboard.isDown("right") then
+        elseif love.keyboard.isDown("right") or (joy and joy:isDown(15)) then
             self:right()
         end
     end

@@ -97,13 +97,13 @@ function Game:nextMap()
 end
 
 function Game:keypressed(key)
-	if self.isPop == 1  and key == "y" then
+	if self.isPop == 1  and (key == "y" or key == 1) then
 		self.isPop = 0
 		self.mapNb = self.mapNb + 1
 		self.map = Map:new("map/"..self.mapNb..".json","map/tileset.png")
 		self:initPerso()
 		self.nxtlvlSound:play()
-	elseif self.isPop == 1  and key == "n" then
+	elseif self.isPop == 1  and (key == "n" or key == 2) then
 		jeu:quit()
 	end
 end
