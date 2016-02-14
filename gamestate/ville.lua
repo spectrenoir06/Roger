@@ -95,7 +95,7 @@ end
 
 function ville:keypressed(key)
     print(key)
-    if (key == ' ') then
+    if (key == 'space') then
         Gamestate.push(jeu, item)
     elseif key == 'escape' then
         love.event.quit()
